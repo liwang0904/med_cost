@@ -1,6 +1,7 @@
-package medcost.util;
+package medcost.parser;
 import java.io.*;
 import java.util.*;
+import medcost.util.ProviderConfig;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -9,7 +10,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class XLSX_Parser implements PricingParser{
-    
     
     @Override
     public List<medcost.components.ItemPrice> parse(ProviderConfig cfg, InputStream is)throws IOException{
@@ -45,11 +45,9 @@ public class XLSX_Parser implements PricingParser{
 	    if(ip != null)list.add(ip);	    	    
         }
          
-        workbook.close();
-	is.close();
+        workbook.close();  is.close();
 	return list;
     }
-
 
     
     private static medcost.components.ItemPrice row2ip(Row row, ProviderConfig cfg, Map<String, Integer>  indices, Map<String, Integer>  other_indices){
@@ -80,10 +78,20 @@ public class XLSX_Parser implements PricingParser{
 	}
 	    
 	if(DEBUG)System.out.println(vals);
-	       
+
+	
+	ip.setProvider(cfg.id);
+	parse_known_keys(ip, vals);
+	
+	return ip;
+    }
+
+    
+    //TODO : parse all known keys, not just code / price
+    private static boolean parse_known_keys(medcost.components.ItemPrice ip, Map<String, Object> vals){	       
 	Object code_obj = vals.get("code");
 	Object price_obj = vals.get("price");
-	if(code_obj == null || price_obj == null)return null;
+	if(code_obj == null || price_obj == null)return false;
 	
 	String code = code_obj.toString();	
 	String pricestr = price_obj.toString();
@@ -91,13 +99,11 @@ public class XLSX_Parser implements PricingParser{
 	try{price = Float.parseFloat(pricestr);}catch(Exception e){
 	    System.err.println("Not a number "+pricestr);
 	    e.printStackTrace();
-	    return null;
+	    return false;
 	}
-	
-	ip.setProvider(cfg.id);
 	ip.setCode(code);
 	ip.setPrice(price);
-	return ip;
+	return true;
     }
     
     private static String code_val(Cell cell){//DO NOT return code value as a double number, return it as integer  !

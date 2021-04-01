@@ -1,8 +1,9 @@
-package medcost.util.parser;
+package medcost.parser;
 import java.io.*;
 import java.util.*;
 import org.apache.commons.csv.*;
-
+import medcost.util.ProviderConfig;
+    
 public class CSV_Parser implements PricingParser{
 
     @Override
@@ -52,7 +53,7 @@ public class CSV_Parser implements PricingParser{
 	Integer code_index = indices.get("code");
 	Integer price_index = indices.get("price");
 	if(code_index != null)ip.setCode(record.get(code_index));
-	if(price_index != null && !mm.util.Validator.empty(record.get(price_index)))ip.setPrice(Float.parseFloat(record.get(price_index)));	
+	if(price_index != null && !mm.util.Validator.empty(record.get(price_index)))ip.setPrice(PricingParser.parse_float(record.get(price_index)));	
 	if(ip.getCode() == null || ip.getPrice() == 0){
 	    System.out.println("@@@@ No code or price: "+record + " ----- "+ indices);return false;
 	}

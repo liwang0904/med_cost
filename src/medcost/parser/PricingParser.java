@@ -1,6 +1,7 @@
-package medcost.util;
+package medcost.parser;
 import java.io.*;
 import java.util.*;
+import medcost.util.ProviderConfig;
 
 public interface PricingParser{
 
@@ -22,4 +23,12 @@ public interface PricingParser{
 
 	return new CSV_Parser();	
     }
+
+    static float parse_float(String str){
+	if(mm.util.Validator.empty(str))return 0f;
+	str = str.replaceAll(",", "");
+	return Float.parseFloat(str);
+    }
 }
+
+//###https://uhhospitals.patientsimple.com/guest/#/estimates/patientestimate
