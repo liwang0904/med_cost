@@ -7,8 +7,6 @@ file = CLEVELAND-CDM-20201228.csv
 
 parser = csv
 
-header = cpt:Service ID||cost:Eff Rate Amt
+header = code:Service ID||price:Eff Rate Amt
 
 
-
-###https://uhhospitals.patientsimple.com/guest/#/estimates/patientestimate
