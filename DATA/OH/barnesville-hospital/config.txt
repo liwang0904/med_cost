@@ -1,0 +1,14 @@
+ref_url  = https://wvumedicine.org/bill-pay/pricing-transparency/
+
+file_url =  https://wvumedicine.org/wp-content/uploads/2021/03/Barnesville-Hospital-Payer-Specific-Charges-for-2021_123120.xlsx
+
+file = Barnesville-Hospital-Payer-Specific-Charges-for-2021_123120.xlsx
+
+
+parser = xlsx
+
+header = code:Charge Code||price:Unit Charge
+
+
+
+
