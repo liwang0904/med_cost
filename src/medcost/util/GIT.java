@@ -31,7 +31,7 @@ public class GIT{
     private static List<medcost.components.ItemPrice> import_data(RepositoryService r_s, DataService d_s, Repository repo, Provider provider)throws IOException{
 	String base_path  =  "DATA/"+provider.getAddress_state().toUpperCase()+"/"+ provider.getId();
 	String cstr = get_content(r_s,d_s, repo, base_path, "config.txt");
-	///System.out.println("@@@@CFG = "+cstr);
+	System.out.println("@@@@CFG = "+cstr);
 	medcost.util.ProviderConfig cfg = medcost.util.ProviderConfig.parse(cstr);
 	cfg.id = provider.getId(); cfg.state = provider.getAddress_state();
 
@@ -57,10 +57,11 @@ public class GIT{
     
     public final static byte[] get_content_bytes(RepositoryService r_s, DataService d_s,  Repository repo, String base_path,  String fname)throws IOException{
 	String sha = r_s.getBranches(repo).get(0).getCommit().getSha();
+	System.out.println(sha);
 	Tree tree = d_s.getTree(repo, sha, true);
 	String path = base_path+"/"+fname;
 	String blob_sha = null;
-	for(TreeEntry en : tree.getTree())     //find sha for file path
+	for(TreeEntry en : tree.getTree())     //find sha for file path 
 	    if(path.equals(en.getPath())){blob_sha = en.getSha(); break;}
 	
 	Blob blob  = d_s.getBlob(repo,  blob_sha);
@@ -73,7 +74,7 @@ public class GIT{
 	String uname = "liwang0904";
 	String repo_name = "med_cost";
 	Provider provider = new Provider();
-	provider.setId("university-hospitals-case-medical-center");
+	provider.setId("university-hospitals-ahuja-medical-center");
 	provider.setAddress_state("OH");
 	GitHubClient client = github_client(token);
 	System.out.println(import_data(client, uname, repo_name, provider));
