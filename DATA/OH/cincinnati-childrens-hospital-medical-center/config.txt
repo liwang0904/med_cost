@@ -1,0 +1,14 @@
+ref_url  = https://www.cincinnatichildrens.org/patients/resources/billing/bill-payment
+
+file_url =  https://www.cincinnatichildrens.org/-/media/cincinnati%20childrens/home/patients/resources/billing/bill-payment/31_0833936_cchmc_standard_charges.csv?la=en
+
+file = 31_0833936_CCHMC_STANDARD_CHARGES.csv
+
+
+parser = csv
+
+header = code:CPT/HCPCS||price:Gross Charge (*Pharmacy Reflects Average Charge Per Patient)
+
+
+
+
