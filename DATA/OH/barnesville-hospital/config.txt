@@ -1,6 +1,6 @@
-ref_url  = 
+ref_url  = https://wvumedicine.org/bill-pay/pricing-transparency/
 
-file_url = 
+file_url = https://wvumedicine.org/wp-content/uploads/2021/03/Barnesville-Hospital-Payer-Specific-Charges-for-2021_123120.xlsx
 
 
 parser = xlsx
