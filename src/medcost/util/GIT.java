@@ -29,9 +29,9 @@ public class GIT{
     }
     
     private static List<medcost.components.ItemPrice> import_data(RepositoryService r_s, DataService d_s, Repository repo, Provider provider)throws IOException{
-	String base_path  =  "DATA/"+provider.getAddress_state().toUpperCase()+"/"+ provider.getId();
+	String base_path  =  "DATA/"+provider.getAddress_state().toUpperCase()+"/"+ provider.getId();	
 	String cstr = get_content(r_s,d_s, repo, base_path, "config.txt");
-	System.out.println("@@@@CFG = "+cstr);
+	System.out.println(base_path+"@@@@CFG = "+cstr);
 	medcost.util.ProviderConfig cfg = medcost.util.ProviderConfig.parse(cstr);
 	cfg.id = provider.getId(); cfg.state = provider.getAddress_state();
 

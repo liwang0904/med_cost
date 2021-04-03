@@ -9,7 +9,7 @@ public class CSV_Parser implements PricingParser{
     @Override
     public List<medcost.components.ItemPrice> parse(ProviderConfig cfg, InputStream is)throws IOException{
 	List<medcost.components.ItemPrice> list = new LinkedList();
-	BufferedReader reader = new new BufferedReader(InputStreamReader(is, "UTF-8"));
+	BufferedReader reader =  new BufferedReader(new InputStreamReader(is, "UTF-8"));
 	if(cfg.header_line_start != null){
 	    while(true){
 		reader.mark(8192);

@@ -8,7 +8,9 @@ public class ProviderConfig{
     public String file_url;
     public String file;
     public String parser;
+    public String header_line_start;
     public String[][] header;
+    
 
     public static ProviderConfig parse(String str){
 	String[] lines = str.split("\n");
