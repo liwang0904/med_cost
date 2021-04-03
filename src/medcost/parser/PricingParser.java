@@ -21,7 +21,11 @@ public interface PricingParser{
 	if("xlsx".equalsIgnoreCase(cfg.parser))
 	    return new XLSX_Parser();
 
-	return new CSV_Parser();	
+	if("csv".equalsIgnoreCase(cfg.parser) || cfg.parser == null || cfg.parser.length() == 0)
+	    return new CSV_Parser();
+	
+	throw new RuntimeException("Unknown parser ? " + cfg.parser);
+		
     }
 
     static float parse_float(String str){

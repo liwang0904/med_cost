@@ -8,9 +8,9 @@ public class ProviderConfig{
     public String file_url;
     public String file;
     public String parser;
-    public String[][] header;
-
     public String header_line_start;
+    public String[][] header;
+    
 
     public static ProviderConfig parse(String str){
 	String[] lines = str.split("\n");
@@ -25,7 +25,6 @@ public class ProviderConfig{
 	    else if("file_url".equals(key))cfg.file_url = val;
 	    else if("ref_url".equals(key))cfg.ref_url = val;
 	    else if("parser".equals(key))cfg.parser = val;
-	    else if ("header_line_start".equals(key))cfg.header_line_start = val;
 	    else if("header".equals(key))cfg.header = _split_header(val);
 	    else System.err.println("Unknown key "+line);
 	}

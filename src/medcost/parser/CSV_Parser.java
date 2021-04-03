@@ -9,7 +9,7 @@ public class CSV_Parser implements PricingParser{
     @Override
     public List<medcost.components.ItemPrice> parse(ProviderConfig cfg, InputStream is)throws IOException{
 	List<medcost.components.ItemPrice> list = new LinkedList();
-	BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+	BufferedReader reader =  new BufferedReader(new InputStreamReader(is, "UTF-8"));
 	if(cfg.header_line_start != null){
 	    while(true){
 		reader.mark(8192);
@@ -77,7 +77,6 @@ public class CSV_Parser implements PricingParser{
 	cfg.id = "test";
 	cfg.state= "OH";
 	cfg.parser = "csv";
-	cfg.header_line_start = "";
 	cfg.header = ProviderConfig._split_header("code:Code||price:OP_Charge");
 	CSV_Parser xp = new CSV_Parser();
 	FileInputStream is = new FileInputStream(new File("lodi-hospital.csv"));	
