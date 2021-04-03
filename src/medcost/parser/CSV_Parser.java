@@ -9,7 +9,19 @@ public class CSV_Parser implements PricingParser{
     @Override
     public List<medcost.components.ItemPrice> parse(ProviderConfig cfg, InputStream is)throws IOException{
 	List<medcost.components.ItemPrice> list = new LinkedList();
-	InputStreamReader reader = new InputStreamReader(is, "UTF-8");
+	BufferedReader reader = new new BufferedReader(InputStreamReader(is, "UTF-8"));
+	if(cfg.header_line_start != null){
+	    while(true){
+		reader.mark(8192);
+		String line = reader.readLine();
+		if(line.startsWith(cfg.header_line_start)){
+		    reader.reset();
+		    break;
+		}
+	    }
+	}	
+	////for(int i = 0; i<cfg.header_skip_lines; i++)	 reader.readline();
+	
 	CSVParser parser = CSVFormat.EXCEL.withHeader().parse(reader);
 
 	Map<String,Integer> map = parser.getHeaderMap();//figure out all the column index
