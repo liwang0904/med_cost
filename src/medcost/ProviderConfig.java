@@ -8,15 +8,11 @@ public class ProviderConfig{
     public String file_url;
     public String file;
     public String parser;
-
-    public String header_line_start;
-    
     public String[][] header;
 
     public static ProviderConfig parse(String str){
 	String[] lines = str.split("\n");
 	ProviderConfig cfg = new ProviderConfig();
-	cfg.header_line_start = "";
 	for(String line : lines){
 	    int p = line.indexOf("=");
 	    if(p < 0)continue;
