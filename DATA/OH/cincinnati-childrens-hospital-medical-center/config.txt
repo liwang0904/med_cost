@@ -7,7 +7,10 @@ file = 31_0833936_CCHMC_STANDARD_CHARGES.csv
 
 parser = csv
 
+header_line_start = Description
+
 header = code:CPT/HCPCS||price:Gross Charge (*Pharmacy Reflects Average Charge Per Patient)
+
 
 
 
