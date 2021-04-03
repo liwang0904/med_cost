@@ -74,7 +74,8 @@ public class GIT{
 	String uname = "liwang0904";
 	String repo_name = "med_cost";
 	Provider provider = new Provider();
-	provider.setId("barnesville-hospital");
+	//provider.setId("barnesville-hospital");
+	provider.setId("")
 	provider.setAddress_state("OH");
 	GitHubClient client = github_client(token);
 	System.out.println(import_data(client, uname, repo_name, provider));

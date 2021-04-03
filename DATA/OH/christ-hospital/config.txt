@@ -1,9 +1,9 @@
 ref_url  = 
 
-file_url = 
+file=Christ Hospital.json
 
 
-parser = xlsx
+parser = json
 
 header = code:Charge Code||price:Unit Charge
 
