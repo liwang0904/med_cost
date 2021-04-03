@@ -3,9 +3,16 @@ ref_url  =
 file_url = 
 
 
-parser = xlsx
 
-header = code:Charge Code||price:Unit Charge
+
+
+parser = csv
+
+header_line_start = Description
+
+header = code:CPT/HCPCS||price:Gross Charge (*Pharmacy Reflects Average Charge Per Patient)
+
+
 
 
 
