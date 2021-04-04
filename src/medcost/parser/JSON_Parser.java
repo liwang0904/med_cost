@@ -13,8 +13,8 @@ public class JSON_Parser implements PricingParser{
 	JsonReader jsonReader = Json.createReader(is);
 	JsonArray array = jsonReader.readArray();
 	jsonReader.close();
-	for(int i = 0 ; i < array.size(); i++){
-	    JsonObject js = array.get(i);
+	for( int i = 0 ; i < array.size() ; i++){
+	    JsonObject js = array.getJsonObject(i);
 	    list.add(js2ip(js, cfg));
 	}
 	return list;
@@ -22,7 +22,12 @@ public class JSON_Parser implements PricingParser{
 
     private static medcost.components.ItemPrice js2ip(JsonObject js, ProviderConfig cfg){
 	medcost.components.ItemPrice ip = new medcost.components.ItemPrice();
+	ip.setProvider(cfg.id);
 
+	for (String key : js.keySet()) {
+	    Object value = js.get(key);
+	    ip.SET(key, value);
+	}
 	return ip;
     }
     
