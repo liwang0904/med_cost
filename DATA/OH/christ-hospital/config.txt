@@ -1,6 +1,7 @@
 ref_url  = 
 
-file=Christ Hospital.json
+###file=Christ Hospital.json
+file=test.json
 
 
 parser = json

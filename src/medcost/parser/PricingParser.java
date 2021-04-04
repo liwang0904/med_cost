@@ -17,6 +17,11 @@ public interface PricingParser{
 		t.printStackTrace();
 	    }
 	}
+
+	
+	   
+	if("json".equalsIgnoreCase(cfg.parser))
+	    return new JSON_Parser();
 	   
 	if("xlsx".equalsIgnoreCase(cfg.parser))
 	    return new XLSX_Parser();
