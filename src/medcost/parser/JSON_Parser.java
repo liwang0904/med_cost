@@ -8,7 +8,7 @@ public class JSON_Parser implements PricingParser{
 
     @Override
     public List<medcost.components.ItemPrice> parse(ProviderConfig cfg, InputStream is)throws IOException{
-	//is = new CleanInputStream(is);
+	is = new CleanInputStream(is);
 	List<medcost.components.ItemPrice> list = new LinkedList();
 	JsonReader jsonReader = Json.createReader(is);
 	JsonArray array = jsonReader.readArray();
@@ -33,13 +33,14 @@ public class JSON_Parser implements PricingParser{
     
     public static void main(String[] args)throws IOException{
 	FileInputStream is = new FileInputStream(new File("/Users/rongxu/research/med_cost/t.json"));
-	
+
+	/*
 	CleanInputStream cis = new CleanInputStream(is);
 	BufferedReader br = new BufferedReader(new InputStreamReader(cis));
 	String line = null;
 	while ( (line=br.readLine()) != null)System.out.print(line);
+	*/
 
-	/*
 	ProviderConfig cfg= new ProviderConfig();
 	cfg.id = "test";
 	cfg.state= "OH";
@@ -47,8 +48,7 @@ public class JSON_Parser implements PricingParser{
 	cfg.header = ProviderConfig._split_header("code:Code||price:OP_Charge");
 	JSON_Parser xp = new JSON_Parser();
 
-	xp.parse(cfg, is);	
-	*/
+	xp.parse(cfg, is);  
     }
 }
 
@@ -96,9 +96,8 @@ class CleanInputStream extends FilterInputStream {
 }
 
 
-
+/*
 class NoNewLineInputStream extends FilterInputStream {
-
     public NoNewLineInputStream(InputStream is){
         super(is);
     }
@@ -134,3 +133,4 @@ class NoNewLineInputStream extends FilterInputStream {
         return c;
     }
 }
+*/
