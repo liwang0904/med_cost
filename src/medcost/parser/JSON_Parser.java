@@ -32,13 +32,14 @@ public class JSON_Parser implements PricingParser{
     }
     
     public static void main(String[] args)throws IOException{
-	FileInputStream is = new FileInputStream(new File("/Users/bill/Desktop/t.json"));
-	/*
+	FileInputStream is = new FileInputStream(new File("/Users/rongxu/research/med_cost/t.json"));
+	
 	CleanInputStream cis = new CleanInputStream(is);
 	BufferedReader br = new BufferedReader(new InputStreamReader(cis));
 	String line = null;
 	while ( (line=br.readLine()) != null)System.out.print(line);
-	*/
+
+	/*
 	ProviderConfig cfg= new ProviderConfig();
 	cfg.id = "test";
 	cfg.state= "OH";
@@ -47,6 +48,7 @@ public class JSON_Parser implements PricingParser{
 	JSON_Parser xp = new JSON_Parser();
 
 	xp.parse(cfg, is);	
+	*/
     }
 }
 
@@ -57,11 +59,11 @@ class CleanInputStream extends FilterInputStream {
         super(is);
     }
 
+    /*
     @Override
     public int read(byte[] b) throws IOException {
         return this.read(b, 0, b.length);
     }
-
     @Override
     public int read(byte[] b, int off, int len) throws IOException {
 	System.out.println(b.length+ " " + off + " " + len);
@@ -80,7 +82,8 @@ class CleanInputStream extends FilterInputStream {
 	
         return n;
     }
-
+    */
+    
     
     @Override
     public int read() throws IOException {
