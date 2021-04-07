@@ -33,7 +33,6 @@ public class JSON_Parser implements PricingParser{
     
     public static void main(String[] args)throws IOException{
 	FileInputStream is = new FileInputStream(new File("/Users/rongxu/research/med_cost/t.json"));
-
 	/*
 	CleanInputStream cis = new CleanInputStream(is);
 	BufferedReader br = new BufferedReader(new InputStreamReader(cis));
@@ -55,9 +54,18 @@ public class JSON_Parser implements PricingParser{
 
 
 class CleanInputStream extends FilterInputStream {
-    public CleanInputStream(InputStream is){
-        super(is);
+    public CleanInputStream(InputStream is){super(is);}
+    
+    @Override
+    public int read() throws IOException {
+        int c;
+        do {
+            c = super.read();
+        } while(c != -1  && c != 9 && c != 10  && (c < 32 || c > 126) );
+        return c;
     }
+}
+    
 
     /*
     @Override
@@ -84,17 +92,6 @@ class CleanInputStream extends FilterInputStream {
     }
     */
     
-    
-    @Override
-    public int read() throws IOException {
-        int c;
-        do {
-            c = super.read();
-        } while(c != -1  && c != 9 && c != 10  && (c < 32 || c > 126) );
-        return c;
-    }
-}
-
 
 /*
 class NoNewLineInputStream extends FilterInputStream {
