@@ -4,7 +4,7 @@ ref_url  = https://www.uhhospitals.org/patients-and-visitors/billing-insurance-a
 
 file = CLEVELAND-CDM-20201228.csv
 
-parser = xlsx
+parser = csv
 
 header = code:Charge Code||price:Unit Charge
 
