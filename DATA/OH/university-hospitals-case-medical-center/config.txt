@@ -3,9 +3,7 @@ ref_url  = https://www.uhhospitals.org/patients-and-visitors/billing-insurance-a
 #file_url = https://www.uhhospitals.org/-/media/Files/Patient-and-Visitors/Patient-Pricing-Information/CLEVELAND-CDM-20201228.csv?la=en&hash=C66F76EE7E41EA86BA3160B09680B5A1A232D93B
 
 file = CLEVELAND-CDM-20201228.csv
-
 parser = csv
-
 header = code:Service ID||price:Eff Rate Amt
 
 
@@ -13,7 +11,7 @@ header = code:Service ID||price:Eff Rate Amt
 
 file = 341567805_UHClevelandMedicalCenter_standardcharges.json
 parser = json
-header = code:keyStr_Associated_Codes||price:num_Avg_Gross_Charge
+header = code:keyStr_Associated_Codes||price:num_Avg_Gross_Charge||payer:str_payer||iob:keyStr_iobSelection||description:keyStr_description||allowed_amount:num_Payer_Allowed_Amount
 
 
 
