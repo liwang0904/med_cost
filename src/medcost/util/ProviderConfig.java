@@ -33,7 +33,7 @@ public class ProviderConfig{
 
     public static String[][] _split_header(String val){	
 	String[] ss = val.split("\\|\\|");
-	String[][] header = new String[2][ss.length];
+	String[][] header = new String[ss.length][2];
 	for(int i = 0 ; i < ss.length; i++){
 	    String s = ss[i];
 	    int px = s.indexOf(":");

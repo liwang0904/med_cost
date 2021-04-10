@@ -29,7 +29,7 @@ public class GIT{
     }
     
     private static List<medcost.components.ItemPrice> import_data(RepositoryService r_s, DataService d_s, Repository repo, Provider provider)throws IOException{
-	String base_path  =  "DATA/"+provider.getAddress_state().toUpperCase()+"/"+ provider.getId();	
+	String base_path  =  "DATA/"+provider.getAddress_state().toUpperCase()+"/"+ provider.getHid();	
 	String cstr = get_content(r_s,d_s, repo, base_path, "config.txt");
 	//System.out.println(base_path+"@@@@CFG = "+cstr);
 	medcost.util.ProviderConfig cfg = medcost.util.ProviderConfig.parse(cstr);
@@ -48,6 +48,7 @@ public class GIT{
 	    byte[] bytes = get_content_bytes(r_s, d_s, repo, base_path, cfg.file);
 	    return parser.parse(cfg, new ByteArrayInputStream(bytes));
 	}
+	
 	return null;		
     }
     
@@ -61,8 +62,11 @@ public class GIT{
 	Tree tree = d_s.getTree(repo, sha, true);
 	String path = base_path+"/"+fname;
 	String blob_sha = null;
-	for(TreeEntry en : tree.getTree())     //find sha for file path 
+	for(TreeEntry en : tree.getTree()){     //find sha for file path
+	    System.out.println(path + " "+ en.getPath());
 	    if(path.equals(en.getPath())){blob_sha = en.getSha(); break;}
+	}
+	if(blob_sha == null)throw new RuntimeException("Can not find path :"+path);
 	
 	Blob blob  = d_s.getBlob(repo,  blob_sha);
 	return org.apache.commons.codec.binary.Base64.decodeBase64(blob.getContent());

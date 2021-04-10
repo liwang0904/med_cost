@@ -15,7 +15,9 @@ public class JSON_Parser implements PricingParser{
 	jsonReader.close();
 	for( int i = 0 ; i < array.size() ; i++){
 	    JsonObject js = array.getJsonObject(i);
-	    list.add(js2ip(js, cfg));
+	    medcost.components.ItemPrice ip = js2ip(js, cfg);
+	    if(ip == null)continue;
+	    list.add(ip);
 	}
 	return list;
     }  
@@ -41,8 +43,12 @@ public class JSON_Parser implements PricingParser{
 	    String key = ss[0];
 	    String map_to = ss[1];
 	    String val  = js.getString(map_to, null);
+	    if(val == null){//WTF !?!!
+		Object obj = js.get(map_to);		
+		if(obj != null)val = obj.toString();
+	    }
 	    if(val == null){
-		System.err.println("Not found "+map_to);
+		System.err.println("Not found "+map_to + " js="+js);
 		return false;
 	    }
 	    if("code".equals(key))ip.setCode(val);
@@ -50,8 +56,8 @@ public class JSON_Parser implements PricingParser{
 	    else if("iob".equals(key))ip.setIob(val);
 	    else if("desc".equals(key) || "description".equals(key))ip.setDescription(val);
 	    else if("price".equals(key))ip.setPrice(PricingParser.parse_float(val));
-	    else if("allowd_amount".equals(key))ip.setAllowed_amount(PricingParser.parse_float(val));
-	    else throw new RuntimeException("Unknown Key "+key +" " +map_to);
+	    else if("allowed_amount".equals(key))ip.setAllowed_amount(PricingParser.parse_float(val));
+	    else throw new RuntimeException("Unknown Key "+key +" => " +map_to);
 	}
 	return true;
     }
