@@ -11,3 +11,9 @@ header = code:Service ID||price:Eff Rate Amt
 
 
 
+file = 341567805_UHClevelandMedicalCenter_standardcharges.json
+parser = json
+header = code:keyStr_Associated_Codes||price:num_Avg_Gross_Charge
+
+
+

@@ -17,7 +17,7 @@ public class ProviderConfig{
 	ProviderConfig cfg = new ProviderConfig();
 	for(String line : lines){
 	    int p = line.indexOf("=");
-	    if(p < 0)continue;
+	    if(p < 0 || line.startsWith("#"))continue;
 	    String key = line.substring(0,p).trim();
 	    String val = line.substring(p+1).trim();
 	    if("ref_url".equals(key))cfg.ref_url=val;
