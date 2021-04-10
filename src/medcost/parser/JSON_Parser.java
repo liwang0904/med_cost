@@ -24,11 +24,36 @@ public class JSON_Parser implements PricingParser{
 	medcost.components.ItemPrice ip = new medcost.components.ItemPrice();
 	ip.setProvider(cfg.id);
 
-	for (String key : js.keySet()) {
+	if(!parse_known_keys(ip, js, cfg))return null;
+	
+	for (String key : js.keySet()){
+	    if(PricingParser.is_known_key(key, cfg))continue; //Do not put known key in attributes
+	    
 	    Object value = js.get(key);
 	    ip.SET(key, value);
 	}
 	return ip;
+    }
+
+
+    private static boolean parse_known_keys(medcost.components.ItemPrice ip, JsonObject js, ProviderConfig cfg){
+	for(String[] ss : cfg.header){
+	    String key = ss[0];
+	    String map_to = ss[1];
+	    String val  = js.getString(map_to, null);
+	    if(val == null){
+		System.err.println("Not found "+map_to);
+		return false;
+	    }
+	    if("code".equals(key))ip.setCode(val);
+	    else if("payer".equals(key))ip.setPayer(val);
+	    else if("iob".equals(key))ip.setIob(val);
+	    else if("desc".equals(key) || "description".equals(key))ip.setDescription(val);
+	    else if("price".equals(key))ip.setPrice(PricingParser.parse_float(val));
+	    else if("allowd_amount".equals(key))ip.setAllowed_amount(PricingParser.parse_float(val));
+	    else throw new RuntimeException("Unknown Key "+key +" " +map_to);
+	}
+	return true;
     }
     
     public static void main(String[] args)throws IOException{

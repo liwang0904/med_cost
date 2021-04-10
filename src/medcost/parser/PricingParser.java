@@ -38,6 +38,14 @@ public interface PricingParser{
 	str = str.replaceAll(",", "");
 	return Float.parseFloat(str);
     }
+
+    static boolean is_known_key(String key, ProviderConfig cfg){
+	for(String[] ss : cfg.header){
+	    String map_to = ss[1];
+	    if(map_to.equals(key))return true;
+	}
+	return false;
+    }
 }
 
 //###https://uhhospitals.patientsimple.com/guest/#/estimates/patientestimate
