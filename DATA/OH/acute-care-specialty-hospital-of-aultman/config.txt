@@ -1,11 +1,11 @@
-ref_url  = 
+ref_url  = https://aultman.org/home/patients-and-visitors/insurance-and-billing/pricing/#/
 
-file_url = 
+file_url = https://aultman.org/assets/Patients-/Pricing-Information/360084-Aultman-Hospital-StandardCharges-Indented.csv
 
 
-parser = xlsx
+parser = csv
 
-header = code:Charge Code||price:Unit Charge
+header = code:Gross Charges/CDM HCPCS||price:Gross Charges/Standard Price
 
 
 
