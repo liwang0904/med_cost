@@ -1,11 +1,12 @@
-ref_url  = 
+ref_url  = https://www.uhhospitals.org/patients-and-visitors/billing-insurance-and-medical-records/cms-medicare-price-transparency-initiative
 
-file_url = 
+#file_url = https://www.uhhospitals.org/-/media/Files/Patient-and-Visitors/Patient-Pricing-Information/CLEVELAND-CDM-20201228.csv?la=en&hash=C66F76EE7E41EA86BA3160B09680B5A1A232D93B
 
+file = CLEVELAND-CDM-20201228.csv
 
-parser = xlsx
+parser = csv
 
-header = code:Charge Code||price:Unit Charge
+header = code:Service ID||price:Eff Rate Amt
 
 
 

@@ -8,13 +8,13 @@ public class JSON_Parser implements PricingParser{
 
     @Override
     public List<medcost.components.ItemPrice> parse(ProviderConfig cfg, InputStream is)throws IOException{
-	//is = new CleanInputStream(is);
+	is = new CleanInputStream(is);
 	List<medcost.components.ItemPrice> list = new LinkedList();
 	JsonReader jsonReader = Json.createReader(is);
 	JsonArray array = jsonReader.readArray();
 	jsonReader.close();
-	for(int i = 0 ; i < array.size(); i++){
-	    JsonObject js = array.get(i);
+	for( int i = 0 ; i < array.size() ; i++){
+	    JsonObject js = array.getJsonObject(i);
 	    list.add(js2ip(js, cfg));
 	}
 	return list;
@@ -22,18 +22,24 @@ public class JSON_Parser implements PricingParser{
 
     private static medcost.components.ItemPrice js2ip(JsonObject js, ProviderConfig cfg){
 	medcost.components.ItemPrice ip = new medcost.components.ItemPrice();
+	ip.setProvider(cfg.id);
 
+	for (String key : js.keySet()) {
+	    Object value = js.get(key);
+	    ip.SET(key, value);
+	}
 	return ip;
     }
     
     public static void main(String[] args)throws IOException{
-	FileInputStream is = new FileInputStream(new File("/Users/bill/Desktop/t.json"));
+	FileInputStream is = new FileInputStream(new File("/Users/rongxu/research/med_cost/t.json"));
 	/*
 	CleanInputStream cis = new CleanInputStream(is);
 	BufferedReader br = new BufferedReader(new InputStreamReader(cis));
 	String line = null;
 	while ( (line=br.readLine()) != null)System.out.print(line);
 	*/
+
 	ProviderConfig cfg= new ProviderConfig();
 	cfg.id = "test";
 	cfg.state= "OH";
@@ -41,22 +47,31 @@ public class JSON_Parser implements PricingParser{
 	cfg.header = ProviderConfig._split_header("code:Code||price:OP_Charge");
 	JSON_Parser xp = new JSON_Parser();
 
-	xp.parse(cfg, is);	
+	xp.parse(cfg, is);  
     }
 }
 
 
 
 class CleanInputStream extends FilterInputStream {
-    public CleanInputStream(InputStream is){
-        super(is);
+    public CleanInputStream(InputStream is){super(is);}
+    
+    @Override
+    public int read() throws IOException {
+        int c;
+        do {
+            c = super.read();
+        } while(c != -1  && c != 9 && c != 10  && (c < 32 || c > 126) );
+        return c;
     }
+}
+    
 
+    /*
     @Override
     public int read(byte[] b) throws IOException {
         return this.read(b, 0, b.length);
     }
-
     @Override
     public int read(byte[] b, int off, int len) throws IOException {
 	System.out.println(b.length+ " " + off + " " + len);
@@ -75,22 +90,11 @@ class CleanInputStream extends FilterInputStream {
 	
         return n;
     }
-
+    */
     
-    @Override
-    public int read() throws IOException {
-        int c;
-        do {
-            c = super.read();
-        } while(c != -1  && c != 9 && c != 10  && (c < 32 || c > 126) );
-        return c;
-    }
-}
 
-
-
+/*
 class NoNewLineInputStream extends FilterInputStream {
-
     public NoNewLineInputStream(InputStream is){
         super(is);
     }
@@ -126,3 +130,4 @@ class NoNewLineInputStream extends FilterInputStream {
         return c;
     }
 }
+*/
