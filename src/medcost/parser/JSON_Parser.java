@@ -7,7 +7,7 @@ import medcost.util.ProviderConfig;
 public class JSON_Parser implements PricingParser{
 
     @Override
-    public List<medcost.components.ItemPrice> parse(ProviderConfig cfg, InputStream is)throws IOException{
+    public List<medcost.components.ItemPrice> parse(ProviderConfig.Config cfg, InputStream is)throws IOException{
 	is = new CleanInputStream(is);
 	List<medcost.components.ItemPrice> list = new LinkedList();
 	JsonReader jsonReader = Json.createReader(is);
@@ -22,9 +22,9 @@ public class JSON_Parser implements PricingParser{
 	return list;
     }  
 
-    private static medcost.components.ItemPrice js2ip(JsonObject js, ProviderConfig cfg){
+    private static medcost.components.ItemPrice js2ip(JsonObject js, ProviderConfig.Config cfg){
 	medcost.components.ItemPrice ip = new medcost.components.ItemPrice();
-	ip.setProvider(cfg.id);
+	ip.setProvider(cfg.getProviderConfig().id);
 
 	if(!parse_known_keys(ip, js, cfg))return null;
 	
@@ -38,7 +38,7 @@ public class JSON_Parser implements PricingParser{
     }
 
 
-    private static boolean parse_known_keys(medcost.components.ItemPrice ip, JsonObject js, ProviderConfig cfg){
+    private static boolean parse_known_keys(medcost.components.ItemPrice ip, JsonObject js, ProviderConfig.Config cfg){
 	for(String[] ss : cfg.header){
 	    String key = ss[0];
 	    String map_to = ss[1];
@@ -70,14 +70,15 @@ public class JSON_Parser implements PricingParser{
 	String line = null;
 	while ( (line=br.readLine()) != null)System.out.print(line);
 	*/
+	ProviderConfig config= new ProviderConfig();
+	config.id = "test";
+	config.state= "OH";
 
-	ProviderConfig cfg= new ProviderConfig();
-	cfg.id = "test";
-	cfg.state= "OH";
+	ProviderConfig.Config cfg= new ProviderConfig.Config(config);
 	cfg.parser = "csv";
 	cfg.header = ProviderConfig._split_header("code:Code||price:OP_Charge");
 	JSON_Parser xp = new JSON_Parser();
-
+	
 	xp.parse(cfg, is);  
     }
 }

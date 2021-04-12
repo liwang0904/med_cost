@@ -5,11 +5,11 @@ import medcost.util.ProviderConfig;
 
 public interface PricingParser{
 
-    List<medcost.components.ItemPrice> parse(ProviderConfig cfg, InputStream is)throws IOException;
+    List<medcost.components.ItemPrice> parse(ProviderConfig.Config cfg, InputStream is)throws IOException;
 
     static boolean DEBUG = true;
-    static PricingParser getParser(ProviderConfig cfg){
-	if(cfg.parser != null && cfg.parser.startsWith("class:")){
+    static PricingParser getParser(ProviderConfig.Config cfg){
+	if(cfg.parser != null && cfg.parser.startsWith("class@")){
 	    String clazz = cfg.parser.substring(6).trim();
 	    try{
 		return (PricingParser)Class.forName(clazz).newInstance();
@@ -39,7 +39,7 @@ public interface PricingParser{
 	return Float.parseFloat(str);
     }
 
-    static boolean is_known_key(String key, ProviderConfig cfg){
+    static boolean is_known_key(String key, ProviderConfig.Config cfg){
 	for(String[] ss : cfg.header){
 	    String map_to = ss[1];
 	    if(map_to.equals(key))return true;

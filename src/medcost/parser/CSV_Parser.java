@@ -7,7 +7,7 @@ import medcost.util.ProviderConfig;
 public class CSV_Parser implements PricingParser{
 
     @Override
-    public List<medcost.components.ItemPrice> parse(ProviderConfig cfg, InputStream is)throws IOException{
+    public List<medcost.components.ItemPrice> parse(ProviderConfig.Config cfg, InputStream is)throws IOException{
 	List<medcost.components.ItemPrice> list = new LinkedList();
 	BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
 	System.out.println("Line*" + reader.readLine());
@@ -48,9 +48,9 @@ public class CSV_Parser implements PricingParser{
 	return list;
     }  
 
-    private static medcost.components.ItemPrice record2ip(CSVRecord record, ProviderConfig cfg, Map<String,Integer> indices, Map<String,Integer> other_indices){
+    private static medcost.components.ItemPrice record2ip(CSVRecord record, ProviderConfig.Config cfg, Map<String,Integer> indices, Map<String,Integer> other_indices){
 	medcost.components.ItemPrice ip = new medcost.components.ItemPrice();
-	ip.setProvider(cfg.id);
+	ip.setProvider(cfg.getProviderConfig().id);
 	
 	if(!parse_known_keys(ip, record, indices))return null;
 	
@@ -75,12 +75,15 @@ public class CSV_Parser implements PricingParser{
     }
     
     public static void main(String[] args)throws IOException{
-	ProviderConfig cfg= new ProviderConfig();
-	cfg.id = "test";
-	cfg.state= "OH";
+	ProviderConfig config= new ProviderConfig();
+	config.id = "test";
+	config.state= "OH";
+	ProviderConfig.Config cfg = new ProviderConfig.Config(config);
 	cfg.parser = "csv";
 	cfg.header_line_start = "";
 	cfg.header = ProviderConfig._split_header("code:CPT/HCPCS||price:Gross Charge (*Pharmacy Reflects Average Charge Per Patient) ");
+	config.configs.add(cfg);
+	
 	CSV_Parser xp = new CSV_Parser();
 	FileInputStream is = new FileInputStream(new File("src/medcost/parser/31_0833936_CCHMC_STANDARD_CHARGES.csv"));	
 	xp.parse(cfg, is);	

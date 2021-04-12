@@ -12,7 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class XLSX_Parser implements PricingParser{
     
     @Override
-    public List<medcost.components.ItemPrice> parse(ProviderConfig cfg, InputStream is)throws IOException{
+    public List<medcost.components.ItemPrice> parse(ProviderConfig.Config cfg, InputStream is)throws IOException{
 	List<medcost.components.ItemPrice> list = new LinkedList();
         Workbook workbook = new XSSFWorkbook(is);
         Sheet sheet = workbook.getSheetAt(0);//should it be configuarable ???
@@ -50,7 +50,7 @@ public class XLSX_Parser implements PricingParser{
     }
 
     
-    private static medcost.components.ItemPrice row2ip(Row row, ProviderConfig cfg, Map<String, Integer>  indices, Map<String, Integer>  other_indices){
+    private static medcost.components.ItemPrice row2ip(Row row, ProviderConfig.Config cfg, Map<String, Integer>  indices, Map<String, Integer>  other_indices){
 	if(row == null){System.err.println("Null Row ?"); return null;}	    	
 	medcost.components.ItemPrice ip = new medcost.components.ItemPrice();
 	Map<String, Object> vals = new HashMap();
@@ -80,7 +80,7 @@ public class XLSX_Parser implements PricingParser{
 	if(DEBUG)System.out.println(vals);
 
 	
-	ip.setProvider(cfg.id);
+	ip.setProvider(cfg.getProviderConfig().id);
 	parse_known_keys(ip, vals);
 	
 	return ip;
@@ -132,9 +132,10 @@ public class XLSX_Parser implements PricingParser{
     
 
     public static void main(String[] args)throws IOException{
-	ProviderConfig cfg= new ProviderConfig();
-	cfg.id = "test";
-	cfg.state= "OH";
+	ProviderConfig config= new ProviderConfig();
+	config.id = "test";
+	config.state= "OH";	
+	ProviderConfig.Config cfg = new ProviderConfig.Config(config);	
 	cfg.parser = "xlsx";
 	cfg.header = ProviderConfig._split_header("code:Bill Item||price:Base Price");
 	XLSX_Parser xp = new  XLSX_Parser();

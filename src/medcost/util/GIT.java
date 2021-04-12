@@ -20,22 +20,23 @@ public class GIT{
 	return client;
     }
     
-    public static List<medcost.components.ItemPrice> import_data(GitHubClient client, String uname, String repo_name, Provider provider)throws IOException{
-	//ContentsService c_s   = new ContentsService(client);
+    public static List<medcost.components.ItemPrice> import_data(GitHubClient client, String uname, String repo_name, Provider provider, String type)throws IOException{
+	//ContentsService c_s = new ContentsService(client);
 	RepositoryService r_s = new RepositoryService(client);
 	DataService d_s = new DataService(client);
 	Repository repo = r_s.getRepository(uname, repo_name);
-	return import_data(r_s, d_s,repo, provider);
+	return import_data(r_s, d_s, repo, provider, type);
     }
     
-    private static List<medcost.components.ItemPrice> import_data(RepositoryService r_s, DataService d_s, Repository repo, Provider provider)throws IOException{
+    private static List<medcost.components.ItemPrice> import_data(RepositoryService r_s, DataService d_s, Repository repo, Provider provider, String type)throws IOException{
 	String base_path  =  "DATA/"+provider.getAddress_state().toUpperCase()+"/"+ provider.getHid();	
 	String cstr = get_content(r_s,d_s, repo, base_path, "config.txt");
 	//System.out.println(base_path+"@@@@CFG = "+cstr);
-	medcost.util.ProviderConfig cfg = medcost.util.ProviderConfig.parse(cstr);
-	cfg.id = provider.getId(); cfg.state = provider.getAddress_state();
-
-	PricingParser parser  = PricingParser.getParser(cfg);	
+	medcost.util.ProviderConfig config = medcost.util.ProviderConfig.parse(cstr);
+	config.id = provider.getId(); config.state = provider.getAddress_state();
+	medcost.util.ProviderConfig.Config cfg  = config.getConfig(type);
+	if(cfg == null)return null;	
+	PricingParser parser  = PricingParser.getParser(cfg);
 	if(!mm.util.Validator.empty(cfg.file_url)){//First : try download using file_url
 	    URL url = new URL(cfg.file_url);
 	    URLConnection uc = url.openConnection();
@@ -82,7 +83,7 @@ public class GIT{
 	provider.setId("university-hospitals-ahuja-medical-center");
 	provider.setAddress_state("OH");
 	GitHubClient client = github_client(token);
-	System.out.println(import_data(client, uname, repo_name, provider));
+	System.out.println(import_data(client, uname, repo_name, provider, ""));
     }
 }
 

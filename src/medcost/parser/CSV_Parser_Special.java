@@ -6,7 +6,7 @@ import org.apache.commons.csv.*;
 import medcost.util.ProviderConfig;
 
 public class CSV_Parser_Special extends CSV_Parser {
-
+    /*
     public boolean isEmpty(CSVRecord csvRecord) {
 	if (csvRecord == null) return true;
 	for (int i = 0; i < csvRecord.size(); i++)
@@ -15,7 +15,7 @@ public class CSV_Parser_Special extends CSV_Parser {
     }
     
     @Override
-    public List<medcost.components.ItemPrice> parse(ProviderConfig cfg, InputStream is) throws IOException{
+    public List<medcost.components.ItemPrice> parse(ProviderConfig.Config cfg, InputStream is) throws IOException{
 	List<medcost.components.ItemPrice> list = new LinkedList();
 	BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
 	System.out.println("Header Line Start: " + cfg.header_line_start);
@@ -57,4 +57,5 @@ public class CSV_Parser_Special extends CSV_Parser {
 	
 	xp.parse(cfg, is);	
     }
+    */
 }
