@@ -4,7 +4,7 @@ ref_url  = https://www.uhhospitals.org/patients-and-visitors/billing-insurance-a
 
 file = CLEVELAND-CDM-20201228.csv
 parser = csv
-header = code:Service ID||price:Eff Rate Amt
+header = code:Service ID||price:Eff Rate Amt||description:Service Description
 ####header_line_start=
 
 
