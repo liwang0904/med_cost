@@ -61,17 +61,27 @@ public class CSV_Parser implements PricingParser{
 	return ip;
     }
 
-    //TODO : parse all known keys, not just code / price
+    
+
     private static boolean parse_known_keys(medcost.components.ItemPrice ip, CSVRecord record, Map<String,Integer> indices){
 	Integer code_index = indices.get("code");
+	Integer iob_index = indices.get("iob");
+	Integer payer_index = indices.get("payer");		
+	Integer desc_index = indices.get("description");
+	Integer allowed_index = indices.get("allowed_amount");		
 	Integer price_index = indices.get("price");
 	if(code_index != null)ip.setCode(record.get(code_index));
-	if(price_index != null && !mm.util.Validator.empty(record.get(price_index)))ip.setPrice(PricingParser.parse_float(record.get(price_index)));	
+	if(iob_index != null)ip.setIob(record.get(iob_index));
+	if(payer_index != null)ip.setPayer(record.get(payer_index));
+	if(desc_index != null)ip.setDescription(record.get(desc_index));
+	if(allowed_index != null && !mm.util.Validator.empty(record.get(allowed_index)))ip.setAllowed_amount(PricingParser.parse_float(record.get(allowed_index)));
+	if(price_index != null && !mm.util.Validator.empty(record.get(price_index)))ip.setPrice(PricingParser.parse_float(record.get(price_index)));
 	if(ip.getCode() == null || ip.getPrice() == 0){
 	    System.out.println("@@@@ No code or price: "+record + " ----- "+ indices);return false;
 	}
 	return true;
     }
+    
     
     public static void main(String[] args)throws IOException{
 	ProviderConfig config= new ProviderConfig();
