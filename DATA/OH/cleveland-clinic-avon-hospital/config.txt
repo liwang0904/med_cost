@@ -1,11 +1,11 @@
 ref_url  = 
 
 file_url = 
+file = avon-hospital.csv.gz
 
+parser = csv
 
-parser = xlsx
-
-header = code:Charge Code||price:Unit Charge
+header = code:Code||self_price:OP_Selfpay||list_price:IP_Charge
 
 
 
