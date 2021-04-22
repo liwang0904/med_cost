@@ -8,6 +8,5 @@ parser = csv
 
 header = code:Code||self_price:OP_Selfpay||list_price:IP_Charge
 
-regex@code=\\QCPT®\\E\\s(.+) 
-
+regex@code=\QCPT\E[^\s]+\s(.+)
 
