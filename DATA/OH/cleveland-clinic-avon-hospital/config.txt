@@ -2,11 +2,11 @@ ref_url  =
 
 file_url = 
 file = avon-hospital.csv.gz
-###file = 5000.csv
+file = 5000.csv
 
 parser = csv
 
-header = code:Code||self_price:OP_Selfpay||list_price:IP_Charge
+header = code:Code||self_price:OP_Selfpay||list_price:OP_Charge
 
 regex@code=\QCPT\E[^\s]+\s(.+)
 
@@ -16,4 +16,4 @@ regex@code=\QCPT\E[^\s]+\s(.+)
 
 == FEE ==
 
-header = code:Code||self_price:OP_Selfpay||list_price:IP_Charge
+header = code:Code||fee:OP Expected Reimbursement||payer:Payer
