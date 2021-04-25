@@ -16,4 +16,4 @@ regex@code=\QCPT\E[^\s]+\s(.+)
 
 == FEE ==
 
-header = code:Code||fee:OP Expected Reimbursement||payer:Payer
+header = code:Code||fee:OP Expected Reimbursement||payer:Payer||plan:Plan(s)
