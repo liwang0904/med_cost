@@ -2,11 +2,18 @@ ref_url  =
 
 file_url = 
 
+file = Metro-Health.csv
 
-parser = xlsx
+parser = csv
 
-header = code:Charge Code||price:Unit Charge
+header = code:Medicare CPT®/HCPCS||list_price:Charge||self_price:Cash Price/Self-Pay*||description:Description
+
+heder_line_start = Description,Charge,Medicare
 
 
+
+=== FEE ====
+
+extra@payers = Aetna,Aetna Medicare Advantage,Aetna Assure Special Needs Plan,Ambetter Health,Anthem,Anthem MediBlue Dual Advantage Special Needs Plan,Anthem Medicare Advantage,Beacon Behavioral Health,Buckeye Community Health Plan Medicaid,Buckeye Medicare Advantage/AllWell,Buckeye Special Needs Plan,CareSource,CareSource Medicaid,CareSource Medicare Advantage,CareSource Special Needs Plan,Cenpatico Behavioral Health,CHAMPUS,Cigna Behavioral Health,Cigna,Cigna Medicare Advantage,Communicare Advantage Special Needs Plan,Coventry Medicare Advantage,Devoted Health Medicare Advantage,HealthLink,Health Ohio Network,Humana,Humana Medicare Advantage,Magellan Behavioral Health,Medical Mutual Marketplace,Medical Mutual of Ohio,Medical Mutual Medicare Advantage,Molina,Molina Medicaid,Molina Special Needs Plan,Multi Plan,Ohio Health Choice,Optum Behavioral Health,Paramount Advantage Medicaid,Paramount Medicare Advantage,Perennial Advantage Special Needs Plan,Private Health Care Systems,SummaCare,TriCare Select,UniCare,United Healthcare,United Healthcare Community Plan Medicaid,United Healthcare Medicare Advantage,United Healthcare Special Needs Plan,USA Managed Care Organization,VA Community Care Network,Valor Health Special Needs Plan,Veterans Choice Program,Wellcare Medicare Advantage
 
 
