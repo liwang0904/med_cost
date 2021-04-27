@@ -8,7 +8,7 @@ parser = csv
 
 header = code:Medicare CPT®/HCPCS||list_price:Charge||self_price:Cash Price/Self-Pay*||description:Description
 
-heder_line_start = Description,Charge,Medicare
+header_line_start = Description,Charge,Medicare
 
 
 
