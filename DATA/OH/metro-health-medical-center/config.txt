@@ -6,7 +6,7 @@ file = Metro-Health.csv
 
 parser = csv
 
-header = code:Medicare CPT®/HCPCS||list_price:Charge||self_price:Cash Price/Self-Pay*||description:Description
+header = code:2||list_price:Charge||self_price:Cash Price/Self-Pay*||description:Description
 
 header_line_start = Description,Charge,Medicare
 
