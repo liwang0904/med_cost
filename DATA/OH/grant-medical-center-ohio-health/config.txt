@@ -2,11 +2,10 @@ ref_url  =
 
 file_url = 
 
+file = 31-4394942_grant_standardcharges.xlsx
 
 parser = xlsx
 
-header = code:Charge Code||price:Unit Charge
+header = code:Code||self_price:Discounted Cash Price (Uninsured Discount 35%)||list_price:Gross Charge
 
-
-
-
+regex@code=\QCPT\E[^\s]+\s(.+)
