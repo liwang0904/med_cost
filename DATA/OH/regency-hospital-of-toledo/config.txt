@@ -1,11 +1,11 @@
-ref_url  = 
+ref_url  = https://toledo.regencyhospital.com/patients-and-families/cms-hospital-pricing-transparency/
 
-file_url = 
+file_url = https://toledo.regencyhospital.com/uploadedfiles/Content/shared/Patients_and_Families/CMS_Hospital_Pricing_Transparency/toledo.csv
 
 
-parser = xlsx
+parser = csv
 
-header = code:Charge Code||price:Unit Charge
+header = code:CPT_CODE||price:CHARGE
 
 
 

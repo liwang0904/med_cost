@@ -1,12 +1,13 @@
-ref_url  = 
+ref_url  = https://www.stvincentcharity.com/patients-and-visitors/charges-for-hospital-services/
 
-file_url = 
-
+file_url = https://www.stvincentcharity.com/media/1828/st-vincent-charity-medical-center_standard-charges_march-2021.xlsx
+file = st-vincent-charity-medical-center_standard-charges_march-2021.xlsx
 
 parser = xlsx
 
-header = code:Charge Code||price:Unit Charge
+header = code:CPT||self_price:UNINSURED RATE||list_price:HOSPITAL PRICE
 
 
+== FEE ==
 
-
+header = code:CPT||fee:AETNA REIMBURSMENT

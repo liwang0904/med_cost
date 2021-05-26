@@ -1,12 +1,15 @@
-ref_url  = 
+ref_url  = https://www.mclaren.org/main/mclaren-charge-master-files
 
-file_url = 
+file_url = https://www.mclaren.org/Uploads/Public/Documents/corporate/ChargeMasterFile/2021/34-4428232_McLarenStLukes_standardcharges.csv
+
+file = 34-4428232_McLarenStLukes_standardcharges.csv
+
+parser = csv
+
+header = description:LONG_DESCRIPTION||code:CPT||list_price:Base Price Schedule
 
 
-parser = xlsx
 
-header = code:Charge Code||price:Unit Charge
+== FEE ==
 
-
-
-
+header = code:CPT

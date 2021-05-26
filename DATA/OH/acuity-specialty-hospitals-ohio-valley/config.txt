@@ -1,11 +1,11 @@
-ref_url  = 
+ref_url  = https://weirton.acuityhealthcare.net/billing-insurance/
 
-file_url = 
+file_url = https://weirton.acuityhealthcare.net/wp-content/uploads/sites/7/2019/01/OH_charge_master_upload.xls
 
 
 parser = xlsx
 
-header = code:Charge Code||price:Unit Charge
+header = code:||price:CHARGE
 
 
 

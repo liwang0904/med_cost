@@ -83,7 +83,7 @@ public class GIT{
 	String repo_name = "med_cost";
 	Provider provider = new Provider();
 	//provider.setId("barnesville-hospital");
-	provider.setId("university-hospitals-ahuja-medical-center");
+	provider.setId("grant-medical-center-ohio-health");
 	provider.setAddress_state("OH");
 	GitHubClient client = github_client(token);
 	medcost.util.ProviderConfig config = import_data_get_config(client, uname, repo_name, provider);

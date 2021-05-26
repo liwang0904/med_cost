@@ -1,11 +1,11 @@
-ref_url  = 
+ref_url  = https://www.uhhospitals.org/patients-and-visitors/billing-insurance-and-medical-records/cms-medicare-price-transparency-initiative
 
-file_url = 
+file_url = https://www.uhhospitals.org/-/media/Files/Patient-and-Visitors/Patient-Pricing-Information/CONNEAUT-CDM-20201228.csv?la=en&hash=D233DE5188FB5741D891788B4D1F4CA9991E0E35
 
 
-parser = xlsx
+parser = csv
 
-header = code:Charge Code||price:Unit Charge
+header = code:Service ID||price:Eff Rate Amt
 
 
 

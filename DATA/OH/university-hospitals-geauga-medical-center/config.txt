@@ -1,12 +1,8 @@
-ref_url  = 
+ref_url  = https://www.uhhospitals.org/patients-and-visitors/billing-insurance-and-medical-records/cms-medicare-price-transparency-initiative
 
-file_url = 
-
-
-parser = xlsx
-
-header = code:Charge Code||price:Unit Charge
+file_url = https://www.uhhospitals.org/-/media/Files/Patient-and-Visitors/Patient-Pricing-Information/GEAUGA-CDM-20201228.csv?la=en&hash=9D0E473CC825E86AD2F26F8C77109742A8823B59
 
 
+parser = csv
 
-
+header = code:Service ID||price:Eff Rate Amt
