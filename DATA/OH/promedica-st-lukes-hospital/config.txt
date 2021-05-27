@@ -2,7 +2,7 @@ ref_url  = https://www.mclaren.org/main/mclaren-charge-master-files
 
 file_url = https://www.mclaren.org/Uploads/Public/Documents/corporate/ChargeMasterFile/2021/34-4428232_McLarenStLukes_standardcharges.csv
 
-file = 34-4428232_McLarenStLukes_standardcharges.csv
+file = 34-4428232_McLarenStLukes_standardcharges.csv.gz
 
 parser = csv
 
@@ -12,4 +12,4 @@ header = description:LONG_DESCRIPTION||code:CPT||list_price:Base Price Schedule
 
 == FEE ==
 
-header = code:CPT
+extra@payers = AARP Medicare Complete,Aetna HMO/PPO,Aetna Medicare,Aetna MyCareOH Medicare Dual,Anthem HMO/PPO,Anthem JW Pathway,Anthem Medicare,Buckeye Ambetter,Buckeye Medicaid,Buckeye MyCareOH Medicare,Bureau of Worker's Comp,CareSource Just4Me,CareSource Medicaid,Cigna,Cofinity,Coventry,Department of Veteran's Affairs,First Health Network,Frontpath,Healthreach,Healthspan,Humana Commercial,Humana Medicare,Immergrun,Medical Mutual Medicare,Medical Mutual NASCO Supermed/HMO,Medical Mutual Supermed/PPO/HMO/POS,Medical Mutual TRAD,Medicare,Michigan Medicaid,Ohio Health Choice,Ohio Medicaid,Ohio PPO Connect,Paramount Advantage,Paramount Elite,PHCS,Tricare,United Healthcare,United Healthcare Medicaid

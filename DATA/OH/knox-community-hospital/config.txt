@@ -2,13 +2,11 @@ ref_url  = https://hospitalpricedisclosure.com/Default.aspx?ci=N8xgythvokKuG2YIa
 
 file_url = https://hospitalpricedisclosure.com/Download.aspx?f=iFd*_*cEPwhQHJy3lVvHy9uQ*-*
 
-file = 360040_Knox-Community-Hospital_StandardCharges.json 
+file = 360040_Knox-Community-Hospital_StandardCharges.json.gz
 
 parser = json
 
-header = code:CDM HCPCS||list_price:Standard Price
-
-regex@code=\QCPT\E[^\s]+\s(.+)
+header = description:Description||code:CDM HCPCS||list_price:Standard Price
 
 
 

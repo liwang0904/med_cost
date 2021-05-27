@@ -1,6 +1,6 @@
 ref_url  = https://mhsystem.org/patientprices
 
-file_url = https://mhsystem.org/assets/documents/2019-price-transparency-cdmfinal.xlsx
+#file_url = https://mhsystem.org/assets/documents/2019-price-transparency-cdmfinal.xlsx
 file = 2019-price-transparency-cdmfinal.xlsx
 
 parser = xlsx
@@ -8,3 +8,9 @@ parser = xlsx
 header = description:Charge Description Master Name||list_price:Charge Amount
 
 regex@list_price=\Q$\E(.+)
+
+drg:file = 2019-price-transparency-drgfinal.xlsx
+drg:parser = xlsx
+
+drg:header = description:DRG Name||code:DRG Code||price:Average Charge Per Case
+regex@price=\Q$\E(.+)

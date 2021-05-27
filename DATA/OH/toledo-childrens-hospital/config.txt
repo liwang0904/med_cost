@@ -8,9 +8,7 @@ parser = json
 
 header = description:keyStr_description||code:keyStr_Associated_Codes||list_price:num_Avg_Gross_Charge
 
-
-
-== FEE ==
-
-header = code:keyStr_Associated_Codes||fee:num_Payer_Allowed_Amount||payer:str_payer
+drg:file = 344428256_ToledoHospital_standardcharges.json
+drg:parser = json
+drg:header = code:keyStr_Associated_Codes||fee:num_Payer_Allowed_Amount||payer:str_payer
 

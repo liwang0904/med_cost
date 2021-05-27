@@ -8,4 +8,6 @@ parser = xlsx
 
 header = code:Code||self_price:Discounted Cash Price (Uninsured Discount 35%)||list_price:Gross Charge
 
-regex@code=\QCPT\E[^\s]+\s(.+)
+regex@self_price =\Q$\E(.+)
+regex@list_price =\Q$\E(.+)
+###****

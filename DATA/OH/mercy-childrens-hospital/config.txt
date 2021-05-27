@@ -1,7 +1,7 @@
 ref_url  = https://www.mercy.com/pay-a-bill/hospital-pricing
 
-file_url = https://www.mercy.com/-/media/mercy/patient-resources/hospital-pricing-transparency/344428250_stvincent_all_payor_combinations.ashx?la=en
-file = StVincent Price Transparency.csv
+file_url = https://www.mercy.com/-/media/mercy/patient-resources/hospital-pricing-transparency/stvincent-price-transparency.ashx?la=en
+file = StVincent Price Transparency.csv.gz
 
 parser = csv
 

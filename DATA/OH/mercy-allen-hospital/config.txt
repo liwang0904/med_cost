@@ -3,7 +3,7 @@ ref_url  = https://www.mercy.com/pay-a-bill/hospital-pricing
 file_url = https://www.mercy.com/-/media/mercy/patient-resources/hospital-pricing-transparency/340864230_allen_all_payor_combinations.ashx?la=en
 file = 340864230_Allen_All_Payor_Combinations.json
 
-parser = csv
+parser = json
 
 header = description:Procedure Description||code:Code||self_price:<Self-pay>||list_price:OP Price
 

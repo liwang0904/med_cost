@@ -1,12 +1,10 @@
-ref_url  = 
+ref_url  = https://www.mercy.com/pay-a-bill/hospital-pricing
 
-file_url = 
+file_url = https://www.mercy.com/-/media/mercy/patient-resources/hospital-pricing-transparency/anderson-price-transparency.ashx?la=en
+file = Anderson Price Transparency.csv.gz
 
+parser = csv
 
-parser = xlsx
+header = description:Procedure||list_price:Charge
 
-header = code:Charge Code||price:Unit Charge
-
-
-
-
+regex@list_price=\Q$\E(.+)
