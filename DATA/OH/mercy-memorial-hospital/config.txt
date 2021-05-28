@@ -1,11 +1,11 @@
-ref_url  = 
+ref_url  = https://www.mercy.com/pay-a-bill/hospital-pricing
 
-file_url = 
+file_url = https://www.mercy.com/-/media/mercy/patient-resources/hospital-pricing-transparency/310785684_memorial_urbana_all_payor_combinations.ashx?la=en
+file=310785684_Memorial_Urbana_All_Payor_Combinations.json
 
+parser = json
 
-parser = xlsx
-
-header = code:Charge Code||price:Unit Charge
+header = description:Procedure Description||code:Code||self_price:<SELF-PAY>||list_price:OP Price
 
 
 

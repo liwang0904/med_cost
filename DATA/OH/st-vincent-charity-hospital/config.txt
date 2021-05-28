@@ -5,7 +5,7 @@ file = st-vincent-charity-medical-center_standard-charges_march-2021.xlsx
 
 parser = xlsx
 
-header = code:CPT||self_price:UNINSURED RATE||list_price:HOSPITAL PRICE
+header = description:DESC||code:CPT||self_price:UNINSURED RATE||list_price:HOSPITAL PRICE
 
 
 == FEE ==

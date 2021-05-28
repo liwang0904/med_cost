@@ -6,7 +6,9 @@ file = 31-4394942_grant_standardcharges.xlsx
 
 parser = xlsx
 
-header = code:Code||self_price:Discounted Cash Price (Uninsured Discount 35%)||list_price:Gross Charge
+header = description:Procedure Description||code:Code||self_price:Discounted Cash Price (Uninsured Discount 35%)||list_price:Gross Charge
+
+header_line_start=Procedure Description
 
 regex@self_price =\Q$\E(.+)
 regex@list_price =\Q$\E(.+)

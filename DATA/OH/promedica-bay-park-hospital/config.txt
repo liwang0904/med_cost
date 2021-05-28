@@ -12,4 +12,4 @@ header = description:keyStr_description||code:keyStr_Associated_Codes||list_pric
 
 == FEE ==
 
-header = code:keyStr_Associated_Codes||fee:num_Payer_Allowed_Amount||payer:str_payer
+header = code:keyStr_Associated_Codes||fee:num_Cash_Discount||payer:str_payer

@@ -8,5 +8,4 @@ parser = json
 
 header = description:Description||code:CDM HCPCS||list_price:Standard Price
 
-
-
+header_line_start=Gross Charges
