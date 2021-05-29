@@ -7,4 +7,4 @@ parser = csv
 
 header = description:Procedure||list_price:Charge
 
-regex@list_price=\Q$\E(.+)
+regex@list_price=([0-9][0-9,\.]+)

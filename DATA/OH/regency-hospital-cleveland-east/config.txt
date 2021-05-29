@@ -2,11 +2,8 @@ ref_url  = https://clevelandeast.regencyhospital.com/patients-and-families/cms-h
 
 file_url = https://clevelandeast.regencyhospital.com/uploadedfiles/Content/shared/Patients_and_Families/CMS_Hospital_Pricing_Transparency/clevelandeast.csv
 
+file=clevelandeast.csv
 
 parser = csv
 
-header = code:CPT_CODE||price:CHARGE
-
-
-
-
+header = description:CHARGE_DESCRIPTION||code:CPT_CODE||price:CHARGE
