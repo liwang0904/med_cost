@@ -1,6 +1,5 @@
 ref_url  = https://www.salemregional.com/patient-visitor-info/financial-assistance
 
-file_url = http://www.srmcinternalmedicinecenter.com/docs/341041385_SalemCommunityHospital_Standard_Charges.json
 file=341041385_SalemCommunityHospital_Standard_Charges.json
 
 
