@@ -1,12 +1,11 @@
-ref_url  = 
+ref_url  = https://www.selectspecialtyhospitals.com/locations-and-tours/oh/akron/akron/
 
-file_url = 
+file_url = akron.csv
 
 
-parser = xlsx
+parser = csv
 
-header = code:Charge Code||price:Unit Charge
-
+header = description:CHARGE_DESCRIPTION||code:CPT_CODE||list_price:CHARGE
 
 
 
