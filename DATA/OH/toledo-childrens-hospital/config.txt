@@ -1,6 +1,6 @@
 ref_url  = https://www.promedica.org/pay-my-bill/patient-pricing-request
 
-file_url = https://search.hospitalpriceindex.com/hpi2/allServices/toledohospital/8206/all
+#file_url = https://search.hospitalpriceindex.com/hpi2/allServices/toledohospital/8206/all
 
 file = 344428256_ToledoHospital_standardcharges.json
 
