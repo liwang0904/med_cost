@@ -1,6 +1,6 @@
 ref_url  = https://www.selectspecialtyhospitals.com/locations-and-tours/oh/akron/akron/
 
-file_url = akron.csv
+file = akron.csv
 
 
 parser = csv
