@@ -1,9 +1,9 @@
 ref_url  = https://www.trumbullregional.org/trumbull-regional-medical-center-price-list
 
 file_url = https://content.steward.org/sites/default/files/Trumbull%20Price%20List%202020_0.xlsx?_ga=2.121864907.152774504.1622040171-737248623.1622040171
-file = Trumbull Price List 2020_0
+file = Trumbull Price List 2020_0.xlsx
 
-parser = csv
+parser = xlsx
 
 header = description:Description||list_price:CURRENT PRICE
 
