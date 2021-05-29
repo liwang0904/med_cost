@@ -1,12 +1,12 @@
-ref_url  = 
+ref_url  = https://www.selectspecialtyhospitals.com/locations-and-tours/oh/columbus/columbus-south/
 
-file_url = 
+file_url = https://resources.selectmedical.com/Pricing-Transparency/critical-illness-recovery/columbussouth.csv
 
+file=columbussouth.csv
 
-parser = xlsx
+parser = csv
 
-header = code:Charge Code||price:Unit Charge
-
+header = description:CHARGE_DESCRIPTION||code:CPT_CODE||list_price:CHARGE
 
 
 
