@@ -1,11 +1,12 @@
-ref_url  = https://toledo.regencyhospital.com/patients-and-families/cms-hospital-pricing-transparency/
+ref_url  = https://www.regencyhospital.com/locations-and-tours/oh/sylvania/toledo/
 
-file_url = https://toledo.regencyhospital.com/uploadedfiles/Content/shared/Patients_and_Families/CMS_Hospital_Pricing_Transparency/toledo.csv
+file_url = https://resources.selectmedical.com/Pricing-Transparency/critical-illness-recovery/toledo.csv
+file=toledo.csv
 
 
 parser = csv
 
-header = code:CPT_CODE||price:CHARGE
+header = description:CHARGE_DESCRIPTION||code:CPT_CODE||list_price:CHARGE
 
 
 
