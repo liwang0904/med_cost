@@ -6,4 +6,4 @@ file=clevelandeast.csv
 
 parser = csv
 
-header = description:CHARGE_DESCRIPTION||code:CPT_CODE||price:CHARGE
+header = description:CHARGE_DESCRIPTION||code:CPT_CODE||list_price:CHARGE
