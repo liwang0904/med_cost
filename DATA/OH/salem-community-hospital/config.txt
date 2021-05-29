@@ -7,7 +7,7 @@ file=341041385_SalemCommunityHospital_Standard_Charges.json
 parser = json
 
 header = code:column5||list_price:column8||description:column1
-header_line_start=
+#header_line_start=
 ###***
 
 
