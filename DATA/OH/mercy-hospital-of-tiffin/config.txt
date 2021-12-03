@@ -5,9 +5,6 @@ file = 344431174_Tiffin_All_Payor_Combinations.json
 
 test_file = test_import.json
 
-###regex@fee=\Q$\E(.+)
-###"Code" : "CPT® 0001A",
-###"Code" : "MS-DRG V38 (FY 2021) 989",
 regex@code=\QCPT® \E(.+)
 
 
@@ -24,5 +21,6 @@ header = description:Procedure Description||code:Code||self_price:<Self-pay>||li
 drg:parser = json
 drg:regex@code=\QMS-DRG V38 (FY 2021) \E(\d+)
 drg:header = description:Procedure Description||code:Code||self_price:<Self-pay>||list_price:OP Price
+drg:valid@code=\QMS-DRG V38 (FY 2021) \E(\d+)
 
-drg:test_file=NONE
+#drg:test_file=NONE
