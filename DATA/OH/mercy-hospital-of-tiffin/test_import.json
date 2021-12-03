@@ -1,0 +1,21 @@
+{
+  "Code" : "CPT® 10060",
+  "Procedure Description" : "Hc I & D Subcutaneous Abscess-simple",
+  "NDC" : "",
+  "Rev Code" : "0510 - CLINIC - GENERAL CLASSIFICATION",
+  "IP Price" : 218.0,
+  "OP Price" : 218.0,
+  "<Self-pay>" : 130.8,
+  "Min" : 0.0,
+  "Max" : 187.04
+}
+
+{
+  "Code" : "MS-DRG V38 (FY 2021) 915",
+  "Procedure Description" : "Allergic Reactions With McC",
+  "NDC" : "",
+  "Rev Code" : "",
+  "<Self-pay>" : 21587.34,
+  "Min" : 6628.58,
+  "Max" : 34020.01
+}
