@@ -1,4 +1,4 @@
-{
+[{
   "Code" : "CPT® 10060",
   "Procedure Description" : "Hc I & D Subcutaneous Abscess-simple",
   "NDC" : "",
@@ -8,8 +8,7 @@
   "<Self-pay>" : 130.8,
   "Min" : 0.0,
   "Max" : 187.04
-}
-
+},
 {
   "Code" : "MS-DRG V38 (FY 2021) 915",
   "Procedure Description" : "Allergic Reactions With McC",
@@ -18,4 +17,4 @@
   "<Self-pay>" : 21587.34,
   "Min" : 6628.58,
   "Max" : 34020.01
-}
+}]
