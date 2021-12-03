@@ -21,6 +21,6 @@ header = description:Procedure Description||code:Code||self_price:<Self-pay>||li
 drg:parser = json
 drg:regex@code=\QMS-DRG V38 (FY 2021) \E(\d+)
 drg:header = description:Procedure Description||code:Code||self_price:<Self-pay>||list_price:OP Price
-drg:valid@code=\QMS-DRG V38 (FY 2021) \E(\d+)
+drg:valid@code = regex:\QMS-DRG V38 (FY 2021) \E(\d+)
 
 #drg:test_file=NONE
