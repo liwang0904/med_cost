@@ -13,6 +13,7 @@ file = 341567805_UHClevelandMedicalCenter_standardcharges.json
 parser = json
 header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Payer_Allowed_Amount
 
+extra@code_split =,
 
 test_file = test_import.json
 
@@ -21,5 +22,5 @@ test_file = test_import.json
 
 == FEE ==
 
-header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Payer_Allowed_Amount||payer:str_paye
+header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Payer_Allowed_Amount||payer:str_payer
 
