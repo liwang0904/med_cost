@@ -11,7 +11,7 @@ ref_url  = https://www.uhhospitals.org/patients-and-visitors/billing-insurance-a
 
 file = 341567805_UHClevelandMedicalCenter_standardcharges.json
 parser = json
-header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Payer_Allowed_Amount
+header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Payer_Allowed_Amount~~num_Cash_Discount
 
 extra@code_split =,
 
@@ -22,5 +22,5 @@ test_file = test_import.json
 
 == FEE ==
 
-header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Payer_Allowed_Amount||payer:str_payer
+header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Payer_Allowed_Amount||payer:str_payer||fee:num_Payer_Allowed_Amount
 
