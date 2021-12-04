@@ -16,3 +16,10 @@ header = code:keyStr_Associated_Codes||description:keyStr_description||list_pric
 
 test_file = test_import.json
 
+
+
+
+== FEE ==
+
+header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Payer_Allowed_Amount||payer:str_paye
+
