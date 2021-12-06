@@ -1,12 +1,19 @@
-ref_url  = 
+ref_url  = https://my.clevelandclinic.org/patients/billing-finance/comprehensive-hospital-charges
 
-file_url = 
+file_url = https://my.clevelandclinic.org/-/scassets/files/org/patients-visitors/hospital-standard-charge-files/340714593-hillcrest-hospital-standard-charges.csv
 
 
-parser = xlsx
+file = 340714593-hillcrest-hospital-standard-charges.csv.gz
+
+test_file = test_import.csv
+
+parser = csv
+
+
+regex@code=\QCPT® \E(.+)
 
 header = code:Charge Code||price:Unit Charge
 
 
-
+###Code Type,Code,Facility,IP Expected Reimbursement,IP_Charge,IP_Selfpay,MAX IP XR,MAX OP XR,MIN IP XR,MIN OP XR,NDC,OP Expected Reimbursement,OP_Charge,OP_Selfpay,Payer,Plan(s),Procedure Description,Procedure,Rev Code
 
