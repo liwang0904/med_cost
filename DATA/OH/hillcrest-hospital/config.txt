@@ -15,12 +15,10 @@ default_code_type = cpt
 
 
 regex@code = CPT\S\s(.+)
-valid@code = regex:CPT\S\s(.+)
-
 
 hcpcs:regex@code=HCPCS\s(.+)
-hcpcs:valid@code=regex:HCPCS\s(.+)
+##hcpcs:valid@code=regex:HCPCS\s(.+)
 
 
 custom:regex@code=Custom\s(.+)
-custom:valid@code=Custom\s(.+)
+
