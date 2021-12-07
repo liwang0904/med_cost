@@ -12,8 +12,9 @@ parser = csv
 header = code:Code||code_type:Code Type||charge_code:Procedure||rev_code:Rev Code||location:Facility||description:Procedure Description||ip_list_price:IP_Charge||ip_self_price:IP_Selfpay||ip_min_rate:MIN IP XR||ip_max_rate:MAX IP XR||op_list_price:OP_Charge||op_self_price:OP_Selfpay||op_min_rate:MIN OP XR||op_max_rate:MAX OP XR||ip_rate:IP Expected Reimbursement||op_rate:OP Expected Reimbursement||payer:Payer||plan:Plan(s)
 
 
-valid@code=required  &&  regex:(?!Custom).+
+valid@code=required  &&  notStartsWith:ADA  &&  notStartsWith:Custom
 
 custom:regex@code=Custom\s(.+)
-custom:valid@code=required   &&  regex:Custom\s(.+)
+
+
 
