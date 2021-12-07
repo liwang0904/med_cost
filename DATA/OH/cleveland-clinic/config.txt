@@ -1,12 +1,21 @@
-ref_url  = 
-
-file_url = 
-
-
-parser = xlsx
-
-header = code:Charge Code||price:Unit Charge
+ref_url  = https://my.clevelandclinic.org/patients/billing-finance/comprehensive-hospital-charges
+file_url = https://my.clevelandclinic.org/-/scassets/files/org/patients-visitors/hospital-standard-charge-files/340714585-cleveland-clinic-main-campus-standard-charges.csv
 
 
+file = 340714585-cleveland-clinic-main-campus-standard-charges.csv
 
+test_file = test_import.csv
+
+parser = csv
+
+
+header = code:Code||code_type:Code Type||charge_code:Procedure||rev_code:Rev Code||location:Facility||description:Procedure Description||ip_list_price:IP_Charge||ip_self_price:IP_Selfpay||ip_min_rate:MIN IP XR||ip_max_rate:MAX IP XR||op_list_price:OP_Charge||op_self_price:OP_Selfpay||op_min_rate:MIN OP XR||op_max_rate:MAX OP XR||ip_rate:IP Expected Reimbursement||op_rate:OP Expected Reimbursement||payer:Payer||plan:Plan(s)
+
+
+
+
+regex@code = (?:CPT\S\s|HCPCS\s)(.+)
+
+
+custom:regex@code=Custom\s(.+)
 
