@@ -2,7 +2,7 @@ ref_url  = https://my.clevelandclinic.org/patients/billing-finance/comprehensive
 file_url = https://my.clevelandclinic.org/-/scassets/files/org/patients-visitors/hospital-standard-charge-files/340714585-cleveland-clinic-main-campus-standard-charges.csv
 
 
-file = 340714585-cleveland-clinic-main-campus-standard-charges.csv
+file = 340714585-cleveland-clinic-main-campus-standard-charges.csv.gz
 
 test_file = test_import.csv
 
