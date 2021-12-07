@@ -1,5 +1,5 @@
 ref_url  = https://my.clevelandclinic.org/patients/billing-finance/comprehensive-hospital-charges
-file_url = https://my.clevelandclinic.org/-/scassets/files/org/patients-visitors/hospital-standard-charge-files/340714593-hillcrest-hospital-standard-charges.csv
+
 
 file = 340718390-lodi-hospital-standard-charges.csv.gz
 
