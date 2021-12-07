@@ -15,6 +15,10 @@ header = code:Code||code_type:Code Type||charge_code:Procedure||rev_code:Rev Cod
 valid@code=required  &&  notStartsWith:ADA  &&  notStartsWith:Custom
 
 custom:regex@code=Custom\s(.+)
+custom:valid@code=regex:Custom\s(.+)
+
+ada:regex@code=ADA\s(.+)
+ada:valid@code=regex:ADA\s(.+)
 
 
 
