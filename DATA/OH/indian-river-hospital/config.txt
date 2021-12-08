@@ -7,7 +7,7 @@ test_file = test_import.xlsx
 parser = xlsx
 
 
-header = charge_code:Svc_Cd||location:Facility||code:HCPC/CPT_Cd||desciption:CDM_Svc_Descr||rev_code:Rev_Cd||ip_list_price:Hospital_Cdm_Chg||ip_self_price:Self_Pay_Chg||ip_min_rate:Minimum_Negotiated_Chg||ip_max_rate:Maximum_Negotiated_Chg
+header = charge_code:Svc_Cd||location:Facility||code:HCPC/CPT_Cd||description:CDM_Svc_Descr||rev_code:Rev_Cd||ip_list_price:Hospital_Cdm_Chg||ip_self_price:Self_Pay_Chg||ip_min_rate:Minimum_Negotiated_Chg||ip_max_rate:Maximum_Negotiated_Chg
 
 
 
