@@ -1,0 +1,9 @@
+1. Strange numbers, eg : "num_DeIdentified_Max_Allowed":30.7142
+
+2. num_Avg_Gross_Charge is always same as num_Cash_Discount  ?!??
+
+3. Unreal prices 53.57 for Untrasound ???
+  "Limited Ultrasound Of Pregnant Uterus" :  "num_Deidentified_Min_Allowed":53.57  is this even real ???
+
+4. Avg_Gross_Charge is larger than min / max allowed  ?!?!!
+   "num_Avg_Gross_Charge":201.04,"num_Payer_Allowed_Amount":26.71,"num_Cash_Discount":201.04,"num_Deidentified_Min_Allowed":25.6552,"num_DeIdentified_Max_Allowed":30.7142
