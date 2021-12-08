@@ -3,7 +3,7 @@ ref_url  = https://www.uhhospitals.org/patients-and-visitors/billing-insurance-a
 
 
 parser = json
-file   = 264827222_uh-ahuja-medical-center_standardcharges.json
+file   = 341924226_uh-richmond-medical-center,-a-campus-of-uh-regional-hospitals_standardcharges.json
 test_file = test_import.json
 extra@code_split =,
 
