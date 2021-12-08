@@ -1,6 +1,5 @@
 ref_url  = https://www.uhhospitals.org/patients-and-visitors/billing-insurance-and-medical-records/cms-medicare-price-transparency-initiative
 
-file_url = https://www.uhhospitals.org/-/media/Files/Patient-and-Visitors/Patient-Pricing-Information/CLEVELAND-CDM-20201228.csv?la=en&hash=C66F76EE7E41EA86BA3160B09680B5A1A232D93B
 
 file = 341567805_UHClevelandMedicalCenter_standardcharges.json
 parser = json
@@ -11,9 +10,4 @@ extra@code_split =,
 test_file = test_import.json
 
 
-
-
-== FEE ==
-
-header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Payer_Allowed_Amount||payer:str_payer||fee:num_Payer_Allowed_Amount
-
+header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Payer_Allowed_Amount~~num_Cash_Discount||payer:str_payer||fee:num_Payer_Allowed_Amount

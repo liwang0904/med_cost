@@ -1,11 +1,15 @@
 ref_url  = https://www.uhhospitals.org/patients-and-visitors/billing-insurance-and-medical-records/cms-medicare-price-transparency-initiative
 
-file_url = https://www.uhhospitals.org/-/media/Files/Patient-and-Visitors/Patient-Pricing-Information/AHUJA-CDM-20201228.csv?la=en&hash=24771995158F210B02B8230BA96FE9FA24CD03E1
+#no standard code ....
+#file_url = https://www.uhhospitals.org/-/media/Files/Patient-and-Visitors/Patient-Pricing-Information/AHUJA-CDM-20201228.csv?la=en&hash=24771995158F210B02B8230BA96FE9FA24CD03E1
 
 
-parser = csv
+parser = json
+file   = 264827222_uh-ahuja-medical-center_standardcharges.json
+test_file = test_import.json
 
-header = code:Service ID||price:Eff Rate Amt
+header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Payer_Allowed_Amount~~num_Cash_Discount||payer:str_payer||fee:num_Payer_Allowed_Amount
+
 
 
 
