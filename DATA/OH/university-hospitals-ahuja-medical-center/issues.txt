@@ -7,3 +7,11 @@
 
 4. Avg_Gross_Charge is larger than min / max allowed  ?!?!!
    "num_Avg_Gross_Charge":201.04,"num_Payer_Allowed_Amount":26.71,"num_Cash_Discount":201.04,"num_Deidentified_Min_Allowed":25.6552,"num_DeIdentified_Max_Allowed":30.7142
+
+
+5. Vague description of code, hard to understand how it is going to be coded, diffence of price    
+   select code , ip_list_price, provider, description  from  ItemPrice where code='844';
+   28052.1 | university-hospitals-ahuja-medical-center
+   6118.25 | university-hospitals-case-medical-center
+
+6. InPatient vs OutPatient ?!?  Need pricing info for both 
