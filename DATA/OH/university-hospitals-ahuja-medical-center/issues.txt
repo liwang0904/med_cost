@@ -14,4 +14,10 @@
    28052.1 | university-hospitals-ahuja-medical-center
    6118.25 | university-hospitals-case-medical-center
 
-6. InPatient vs OutPatient ?!?  Need pricing info for both 
+6. InPatient vs OutPatient ?!?  Need pricing info for both
+
+#no standard code ....
+#file_url = https://www.uhhospitals.org/-/media/Files/Patient-and-Visitors/Patient-Pricing-Information/AHUJA-CDM-20201228.csv?la=en&hash=24771995158F210B02B8230BA96FE9FA24CD03E1
+
+
+

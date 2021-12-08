@@ -1,11 +1,14 @@
-ref_url  = 
-
-file_url = 
+ref_url  = https://www.uhhospitals.org/patients-and-visitors/billing-insurance-and-medical-records/cms-medicare-price-transparency-initiative
 
 
-parser = xlsx
 
-header = code:Charge Code||price:Unit Charge
+parser = json
+file   = 340714612_uh-elyria-medical-center_standardcharges.json
+test_file = test_import.json
+extra@code_split =,
+
+header = code:keyStr_Associated_Codes||description:keyStr_description||location:keyStr_iobSelection||ip_list_price:num_Avg_Gross_Charge||ip_min_rate:num_Deidentified_Min_Allowed||ip_max_rate:num_DeIdentified_Max_Allowed||ip_self_price:num_Cash_Discount||ip_rate:num_Payer_Allowed_Amount||payer:str_payer
+
 
 
 
