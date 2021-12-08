@@ -8,7 +8,7 @@ parser = json
 file   = 264827222_uh-ahuja-medical-center_standardcharges.json
 test_file = test_import.json
 
-header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Payer_Allowed_Amount~~num_Cash_Discount||payer:str_payer||fee:num_Payer_Allowed_Amount
+header = code:keyStr_Associated_Codes||description:keyStr_description||location:keyStr_iobSelection||ip_list_price:num_Avg_Gross_Charge||ip_min_price:num_Deidentified_Min_Allowed||ip_max_price:num_DeIdentified_Max_Allowed||ip_self_price:num_Cash_Discount||ip_rate:num_Payer_Allowed_Amount||payer:str_payer
 
 
 
