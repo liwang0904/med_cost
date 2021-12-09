@@ -1,19 +1,19 @@
-ref_url  = 
-
-file_url = 
-file = avon-hospital.csv.gz
-file = 5000.csv
-
-parser = csv
-
-header = code:Code||self_price:OP_Selfpay||list_price:OP_Charge
-
-regex@code=\QCPT\E[^\s]+\s(.+)
+ref_url  = https://my.clevelandclinic.org/patients/billing-finance/comprehensive-hospital-charges
 
 
+file      = 474442902-avon-hospital-standard-charges.csv.gz
+
+test_file = test_import.csv
+
+parser    = csv
+
+
+header = code:Code||code_type:Code Type||charge_code:Procedure||rev_code:Rev Code||location:Facility||description:Procedure Description||ip_list_price:IP_Charge||ip_self_price:IP_Selfpay||ip_min_rate:MIN IP XR||ip_max_rate:MAX IP XR||op_list_price:OP_Charge||op_self_price:OP_Selfpay||op_min_rate:MIN OP XR||op_max_rate:MAX OP XR||ip_rate:IP Expected Reimbursement||op_rate:OP Expected Reimbursement||payer:Payer||plan:Plan(s)
 
 
 
-== FEE ==
+regex@code        = (?:CPT\S\s|HCPCS\s)(.+)
 
-header = code:Code||fee:OP Expected Reimbursement||payer:Payer||plan:Plan(s)
+custom:regex@code = Custom\s(.+)
+
+drg:regex@code    = \QMS-DRG V37 (2020) \E(.+)
