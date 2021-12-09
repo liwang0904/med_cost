@@ -18,3 +18,5 @@ regex@code = (?:CPT\S\s|HCPCS\s)(.+)
 
 custom:regex@code=Custom\s(.+)
 
+
+drg:regex@code    = \QMS-DRG V37 (2020) \E(.+)
