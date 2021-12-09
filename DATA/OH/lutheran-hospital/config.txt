@@ -1,7 +1,7 @@
 ref_url  = https://my.clevelandclinic.org/patients/billing-finance/comprehensive-hospital-charges
 
 
-file      = 340714593-euclid-hospital-standard-charges.csv.gz
+file      = 340714684-lutheran-hospital-standard-charges.csv.gz
 
 test_file = test_import.csv
 
