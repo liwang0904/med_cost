@@ -1,4 +1,4 @@
-filec     = 106430905_CDM_All_2021.xlsx
+file      = 106430905_CDM_All_2021.xlsx
 test_file = 106430905_CDM_All_2021.xlsx
 
 parser = xlsx
