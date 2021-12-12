@@ -2,7 +2,7 @@ file      = MetroHealthStandardCharges 111921.csv
 test_file = test_import.csv
 parser    = csv
 
-header = code:Medicare CPT®/HCPCS||ip_list_price:Charge||ip_self_price:Cash Price/Self-Pay*||description:Description||ip_min_rate:De-identified minimum negotiated charge||ip_max_rate:De-identified maximum negotiated charge
+header = code:2||ip_list_price:Charge||ip_self_price:Cash Price/Self-Pay*||description:Description||ip_min_rate:De-identified minimum negotiated charge||ip_max_rate:De-identified maximum negotiated charge
 
 header_line_start = Description,Charge,Medicare
 
