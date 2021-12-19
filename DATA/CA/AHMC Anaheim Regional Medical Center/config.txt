@@ -5,6 +5,6 @@ test_file = test_import.xlsx
 parser = xlsx
 
 
-header = charge_code:CDM||code:CPT||description:Charge Description||ip_list_price:Price
+header = charge_code:CDM||code:CPT||description:##1||ip_list_price:Price
 
 extra@sheet = Price Transparency CDM
