@@ -5,11 +5,10 @@ test_file = test_import.xlsx
 parser = xlsx_2
 
 #CPT_MOD
-#DRG_SOI
 #NDC_CD
 #DW_SRC
 #MS-DRGV37|CPT|HCPCS|NDC|SUPPLY|APR-DRGV30|APR-DRGV34|APR-DRGV36
 
 map_values = INPATIENT:ip||OUTPATIENT:op
 
-header = io_type: CLASS_NM||code:BILLING_CD||code_type:BILLING_CD_TYPE_NM||modifier:DRG_SOI||description:BILLING_DESCRIPTION||payer:PAYER||plan:PLAN||list_price:GROSS_CHG_AMT||min_rate:MIN_RATE_AMT||max_rate:MAX_RATE_AMT||self_price: UNINSURED_RATE||fee:PAYER_RATE
+header = io_type: CLASS_NM||code:BILLING_CD||code_type:BILLING_CD_TYPE_NM||modifier:DRG_SOI||description:BILLING_DESCRIPTION||payer:PAYER||plan:PLAN||list_price:GROSS_CHG_AMT||min_rate:MIN_RATE_AMT||max_rate:MAX_RATE_AMT||self_price:UNINSURED_RATE||fee:PAYER_RATE
