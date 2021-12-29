@@ -1,0 +1,27 @@
+
+file=BostonMedicalCenter_standardcharges.xlsx
+test_file = test_import.xlsx
+
+parser = xlsx_2
+
+#CLASS_NM
+#BILLING_CD
+#BILLING_CD_TYPE_NM
+#BILLING_DESCRIPTION
+#CPT_MOD
+#DRG_SOI
+#NDC_CD
+#GROSS_CHG_AMT
+#PAYER
+#PLAN
+#PAYER_RATE
+#MIN_RATE_AMT
+#MAX_RATE_AMT
+#UNINSURED_RATE
+#DW_SRC
+
+map_values = INPATIENT:ip||OUTPATIENT:op
+
+header = io_type: CLASS_NM||code:BILLING_CD||code_type:BILLING_CD_TYPE_NM||description:BILLING_DESCRIPTION||payer:PAYER||plan:PLAN||list_price:PAYER_RATE||min_rate:MIN_RATE_AMT||max_rate:MAX_RATE_AMT||self_price: UNINSURED_RATE
+
+##extra@sheet = Price Transparency CDM
