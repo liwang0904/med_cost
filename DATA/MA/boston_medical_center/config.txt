@@ -22,6 +22,6 @@ parser = xlsx_2
 
 map_values = INPATIENT:ip||OUTPATIENT:op
 
-header = io_type: CLASS_NM||code:BILLING_CD||code_type:BILLING_CD_TYPE_NM||description:BILLING_DESCRIPTION||payer:PAYER||plan:PLAN||list_price:PAYER_RATE||min_rate:MIN_RATE_AMT||max_rate:MAX_RATE_AMT||self_price: UNINSURED_RATE
+header = io_type: CLASS_NM||code:BILLING_CD||code_type:BILLING_CD_TYPE_NM||description:BILLING_DESCRIPTION||payer:PAYER||plan:PLAN||list_price:GROSS_CHG_AMT||min_rate:MIN_RATE_AMT||max_rate:MAX_RATE_AMT||self_price: UNINSURED_RATE||fee:PAYER_RATE
 
 ##extra@sheet = Price Transparency CDM
