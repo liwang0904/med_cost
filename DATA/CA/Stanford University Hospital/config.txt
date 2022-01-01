@@ -4,7 +4,7 @@ test_file = 106430905_CDM_All_2021.xlsx
 parser = xlsx
 
 
-header = code:2021 CPT Code||description:##0||ip_list_price:Average Charge
+header = code:2021 CPT Code||description:##0||list_price:Average Charge
 
 extra@sheet     = AB 1045 Form
 extra@code_split= or ||  -
