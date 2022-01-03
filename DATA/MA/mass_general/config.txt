@@ -6,7 +6,7 @@ ref_url=https://www.massgeneral.org/notices/billing/CMS-required-hospital-charge
 parser = csv
 
 
-header=location:facility_name||charge_code:procedure||code_type||cod||rev_code:rev_code||descriotion:procedure_description||payer||plan||list_price:op_price~~ip_price
+header=location:facility_name||charge_code:procedure||code_type||code||rev_code:rev_code||descriotion:procedure_description||payer||plan||list_price:op_price~~ip_price
 
 extra@code_extract = CPT\S\s(.+)
 
