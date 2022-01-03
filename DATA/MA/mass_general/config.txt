@@ -10,6 +10,7 @@ header=location:facility_name||charge_code:procedure||code_type||code||rev_code:
 
 extra@code_extract = CPT\S\s(.+)
 extra@delimiter = |
+extra@quote     = null
 
 === FEE ===
 
