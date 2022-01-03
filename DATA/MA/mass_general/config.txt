@@ -1,0 +1,10 @@
+test_file = test_import.csv
+ref_url=https://www.massgeneral.org/notices/billing/CMS-required-hospital-charge-data
+##https://www.massgeneralbrigham.org/patient-information/billing-and-insurance/hospital-charge-data
+##CMS-Required Hospital Charge Data | Mass General Brigham
+
+parser = csv
+
+
+header=location:facility_name||charge_code:procedure||code_type||code||ip_min_xr:min_ip_reimb||ip_max_xr:max_ip_reimb||op_min_xr:min_op_reimb||op_max_xr:max_op_reimb||rev_code:rev_code||descriotion:procedure_description||payer||plan||ip_price||ip_price_detail:ip_pricing_detail||ip_xr:ip_expected_reimbursement||ip_xr_detail||op_price||op_price_detail:op_pricing_detail||op_xr:op_expected_reimbursement||op_xr_detail
+
