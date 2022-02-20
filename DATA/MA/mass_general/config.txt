@@ -2,7 +2,8 @@ test_file = test_import.csv
 ref_url=https://www.massgeneral.org/notices/billing/CMS-required-hospital-charge-data
 ##https://www.massgeneralbrigham.org/patient-information/billing-and-insurance/hospital-charge-data
 ##CMS-Required Hospital Charge Data | Mass General Brigham
-file_url = file:///tmp/042697983_Massachusetts-General-Hospital_StandardCharges.txt.gz
+##file_url = file:///tmp/042697983_Massachusetts-General-Hospital_StandardCharges.txt.gz
+file     = 90847.csv
 parser = csv
 
 
