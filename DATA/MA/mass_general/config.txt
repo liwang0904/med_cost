@@ -2,15 +2,15 @@ test_file = test_import.csv
 ref_url=https://www.massgeneral.org/notices/billing/CMS-required-hospital-charge-data
 ##https://www.massgeneralbrigham.org/patient-information/billing-and-insurance/hospital-charge-data
 ##CMS-Required Hospital Charge Data | Mass General Brigham
-##file_url = file:///tmp/042697983_Massachusetts-General-Hospital_StandardCharges.txt.gz
-file     = 90847.csv
+file_url = file:///tmp/042697983_Massachusetts-General-Hospital_StandardCharges.txt.gz
+##file   = 90847.csv
 parser = csv
 
 
 header=location:facility_name||charge_code:procedure||code_type||code||rev_code:rev_code||description:procedure_description||payer||plan||list_price:op_price~~ip_price
 
 extra@code_extract = CPT\S\s(.+) || HCPCS\s(.+) || \QMS-DRG V39 (FY 2022)\E\s+(.+)
-##extra@delimiter = |
+extra@delimiter = |
 extra@quote     = 
 extra@estimated_item_count = 200000
 
