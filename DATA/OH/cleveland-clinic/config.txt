@@ -13,3 +13,9 @@ header = code:Code||code_type:Code Type||charge_code:Procedure||rev_code:Rev Cod
 
 extra@code_extract =  (?:CPT\S\s|HCPCS\s)(.+)  
 valid@code = required 
+
+
+=== FEE ===
+
+
+header = code:Code||code_type:Code Type||charge_code:Procedure||rev_code:Rev Code||location:Facility||description:Procedure Description||ip_price:IP_Charge||ip_min_xr:MIN IP XR||ip_max_xr:MAX IP XR||ip_xr:IP Expected Reimbursement||op_price:OP_Charge||op_min_xr:MIN OP XR||op_max_xr:MAX OP XR||op_xr:OP Expected Reimbursement||payer:Payer||plan:Plan(s)
