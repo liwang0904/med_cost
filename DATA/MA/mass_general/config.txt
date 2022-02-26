@@ -13,6 +13,7 @@ extra@code_extract = CPT\S\s(.+) || HCPCS\s(.+) || \QMS-DRG V39 (FY 2022)\E\s+(.
 extra@delimiter = |
 extra@quote     = 
 extra@estimated_item_count = 200000
+valid@location = eq:MGH Parent
 
 === FEE ===
 
