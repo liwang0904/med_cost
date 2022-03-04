@@ -8,7 +8,7 @@ parser = xlsx
 header = charge_code:CDM||code:CPT||description:##1||list_price:Price
 
 #extra@sheet = Price Transparency CDM
-header = code:##1||description:##0||list_price:##2
+header = code:##1||description:##0||list_price:##2||self_price:##2
 extra@sheet = AB 1045 Form 
 extra@code_split= or ||  -
 valid@code        = number
