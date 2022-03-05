@@ -4,6 +4,6 @@ file   =340726081_ashtabula-county-medical-center_standardcharges.json
 test_file = test_import.json
 extra@code_split =,
 
-header = code:keyStr_Associated_Codes||description:keyStr_description||location:keyStr_iobSelection||list_price:num_Avg_Gross_Charge||min_rate:num_Deidentified_Min_Allowed||max_rate:num_DeIdentified_Max_Allowed||self_price:num_Cash_Discount||ip_xr:num_Payer_Allowed_Amount||op_xr:num_Payer_Allowed_Amount||payer:str_payer
+header = code:Associated_Codes||description||list_price:Gross_Charge||self_price:Cash_Discount||ip_xr:Payer_Allowed_Amount||op_xr:Payer_Allowed_Amount||payer
 
 
