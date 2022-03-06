@@ -1,15 +1,10 @@
 ref_url  = https://www.cantonmercy.org/pricing/
 
 file=341893439_ClevelandClinicMercyHospital_standardcharges.json
-
+test_file = test_import.json
 
 parser = json
 
-header = description:keyStr_description||code:keyStr_Associated_Codes||list_price:num_Avg_Gross_Charge
+header = description:keyStr_description||code:keyStr_Associated_Codes||list_price:num_Gross_Charge||self_price:num_Cash_Discount||min_rate:num_Deidentified_Min_Allowed||max_rate:num_Deidentified_Max_Allowed||xr:num_Payer_Allowed_Amount||payer:str_payer
 
-== FEE ==
-
-header = code:keyStr_Associated_Codes||fee:num_Cash_Discount||payer:str_payer
-
-
-###*** DRG PDF
+extra@code_split =,
