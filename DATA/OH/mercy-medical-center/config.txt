@@ -5,6 +5,7 @@ test_file = test_import.json
 
 parser = json
 
-header = description:keyStr_description||code:keyStr_Associated_Codes||list_price:num_Gross_Charge||self_price:num_Cash_Discount||min_rate:num_Deidentified_Min_Allowed||max_rate:num_Deidentified_Max_Allowed||xr:num_Payer_Allowed_Amount||payer:str_payer
+header = code:keyStr_Associated_Codes||description:keyStr_description||list_price:num_Avg_Gross_Charge||min_rate:num_Deidentified_Min_Allowed||max_rate:num_DeIdentified_Max_Allowed||self_price:num_Cash_Discount||xr:num_Payer_Allowed_Amount||payer:str_payer
+
 
 extra@code_split =,
