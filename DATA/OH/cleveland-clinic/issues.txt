@@ -1,1 +1,29 @@
 1. What are the codes that is not Custom or CPT or ADA  ???
+2. 93452  cardiac cath    $13363  --- $9576
+    66984                         $8447    --- $3035
+    19120                         $5002    --- $3048
+
+
+
+19120
+Total Charges$5,002
+Hospital Charges$3,048
+Physician Charges$1,954
+
+TH :  1981.20
+
+
+93452
+Total Charges$13,363
+Hospital Charges$10,055
+Physician Charges$3,308
+
+TH 6224.40
+
+
+66984
+Total Charges$8,447
+Hospital Charges$5,588
+Physician Charges$2,859
+
+TH 1915.55
