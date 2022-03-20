@@ -1,6 +1,5 @@
 Code Type,Code,Facility,IP Expected Reimbursement,IP_Charge,IP_Selfpay,MAX IP XR,MAX OP XR,MIN IP XR,MIN OP XR,NDC,OP Expected Reimbursement,OP_Charge,OP_Selfpay,Payer,Plan(s),Procedure Description,Procedure,Rev Code
-EAP,,Euclid,,,,,,,,,,,,<Self-pay>,<Self-pay>,Misc Send Out Test,99999,
-EAP,,Euclid,,,,,,,,,,,,<Self-pay>,<Self-pay>,Misc Send Out Test,99999998,
+EAP,CPT@ 0001A,Avon,,80,52,N/A,80,N/A,26,,37.15,80,52,UPMC MEDICARE,UPMC FOR LIFE HMO [12183],Adm Sarscov2 30mcg/0.3ml 1st,77100185,0771 - VACCINE ADMINISTRATION
 EAP,CPT® 0035U,Euclid,0,75,48.75,71.25,,0,,,,,,UNITED HEALTH,UHC RAILROAD [59010],Cjd Neuro Csf Qual,30009,0
 EAP,CPT® 0035U,Euclid,71.25,75,48.75,71.25,,0,,,,,,AETNA [53277],AETNA MEDICARE SUPPLEMENT [53347],Cjd Neuro Csf Qual,30009,0
 EAP,CPT® 0035U,Euclid,45,75,48.75,71.25,,0,,,,,,THP UPPER OHI,THP HMO [52059],Cjd Neuro Csf Qual,30009,0
