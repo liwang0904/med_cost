@@ -1,0 +1,13 @@
+ref_url  = https://my.clevelandclinic.org/patients/billing-finance/comprehensive-hospital-charges
+
+
+file      = 474442902_avon-hospital_standardcharges.csv
+
+test_file = test_import.csv
+
+parser    = csv
+
+header = code:Code||code_type:Code Type||charge_code:Procedure||rev_code:Rev Code||location:Facility||description:Procedure Description||ip_price:IP_Charge||self_price:OP_Selfpay||ip_min_xr:MIN IP XR||ip_max_xr:MAX IP XR||ip_xr:IP Expected Reimbursement||op_price:OP_Charge||op_min_xr:MIN OP XR||op_max_xr:MAX OP XR||op_xr:OP Expected Reimbursement||payer:Payer||plan:Plan(s)
+
+
+regex@code        = (?:CPT\S\s|HCPCS\s)(.+)
