@@ -1,7 +1,7 @@
 ref_url  = https://my.clevelandclinic.org/patients/billing-finance/comprehensive-hospital-charges
 
 
-file      = 474442902_avon-hospital_standardcharges.csv
+file      = 474442902_avon-hospital_standardcharges.csv.gz
 
 test_file = test_import.csv
 
