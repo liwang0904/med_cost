@@ -1,12 +1,10 @@
-ref_url  = 
 
-file_url = 
+file=Adena_CDM_02042022.csv
+test_file = test_import.csv
 
+#header =io_type:CLASS_NM||code:BILLING_CD||code_type:BILLING_CD_TYPE_NM||modifier:DRG_SOI||description:BILLING_DESCRIPTION||payer:PAYER||plan:PLAN||list_price:GROSS_CHG_AMT||min_rate:MIN_RATE_AMT||max_rate:MAX_RATE_AMT||self_price:UNINSURED_RATE||xr:PAYER_RATE
+#BarCdmID|Name|GlGdp|HCPCS|CPT|Subcategory|StandardAmount|StandardEffectiveDateID|Active|IPCount2022|IPAmount2022|OPCount2022|OPAmount2022|ChargeType|GlCorp|ReplaceCode1|ReplaceCode2|ReplaceCode3|ReplaceCode4|ReplaceCode5|RVU|HcpcsEffectiveDateTime|CptEffectiveDateTime|MasterCodeOnly|SubcategoryDescription|ClientDiscount|HcpcsMultiEffectiveDateTime|HcpcsMultiplier|Editable|StdProCompPercent|Facility_MisFacID|O/D|StatExpression|StatExpressionOverride|StatValue|Requirement|HCPCS_MCD|HcpcsMcdEffectiveDateTime|HCPCS_MCR|HcpcsMcrEffectiveDateTime|CPTMod|HCPCSMod
 
-parser = xlsx
-
-header = code:Charge Code||price:Unit Charge
-
-
-
+header = code:CPT||list_price:StandardAmount||ip_list_price:IPAmount2022||op_list_price:OPAmount2022||self_price:ClientDiscount||charge_type:ChargeType||description:Name
+extra@delimiter = | 
 
