@@ -9,7 +9,7 @@ parser = csv
 
 header = charge_code:0||description:1||code:2||list_price:3
 
-valid@list_price = required &&  number 
+valid@list_price = required
 valid@code =required &&  number
 
 
