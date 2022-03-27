@@ -1,11 +1,13 @@
 ref_url  = 
 
-file_url = 
+file_url =https://www.waynehealthcare.org/visitors-and-patients/cost-of-services/
 
+file = 344428598-WAYNE-HEALTHCARE-STANDARD-CHARGES-12152021.csv
+est_file = test_import.csv
 
-parser = xlsx
+parser = csv
 
-header = code:Charge Code||price:Unit Charge
+header = charge_code:##0||description:##1||code:##2||list_price:##3
 
 
 
