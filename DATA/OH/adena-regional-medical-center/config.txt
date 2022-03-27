@@ -1,4 +1,5 @@
-
+ref_url= https://www.adena.org/patients-and-visitors/billing-and-financial-services/billing-and-insurance
+web_url=https://www.cdmpricing.com/9cb51dc5fcd2bab15192bf87cc00db41/standard-charges
 file=Adena_CDM_02042022.csv
 test_file = test_import.csv
 

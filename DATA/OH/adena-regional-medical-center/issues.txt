@@ -1,0 +1,5 @@
+- provided data does not reflect the true price
+   Standard Amount => Minimum
+   OPAmount2022 => Discount
+
+
