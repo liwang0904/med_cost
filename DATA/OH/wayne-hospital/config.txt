@@ -3,7 +3,7 @@ ref_url  =
 file_url =https://www.waynehealthcare.org/visitors-and-patients/cost-of-services/
 
 file = 344428598-WAYNE-HEALTHCARE-STANDARD-CHARGES-12152021.csv
-est_file = test_import.csv
+test_file = test_import.csv
 
 parser = csv
 
