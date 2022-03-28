@@ -5,7 +5,7 @@ file_url = 38-4105653_berger_standardcharges.xlsx.gz
 test_file = 38-4105653_berger_standardcharges.xlsx.gz
 parser = xlsx
 
-header =description:Procedure Description||io_type:Patient Class (Inpatient/Outpatient)||code:Code||rev_code:Rev Code||list_price:Gross Charge||self_price:Discounted Cash Price (Uninsured Discount 35%)||min_xr: Derived Negotiated Rate Estimate Min||max_xr:Derived Negotiated Rate Estimate Max
+header =description:Procedure Description||io_type:Patient Class (Inpatient/Outpatient)||code:Code||rev_code:Rev Code||list_price:Gross Charge||self_price:Discounted Cash Price (Uninsured Discount 35%)||min_xr:##7||max_xr:##8
 
 
 
