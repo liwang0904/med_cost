@@ -1,6 +1,6 @@
 ref_url  = https://www.ohiohealth.com/patients-and-visitors/prepare-for-your-visit/price-estimator
 
-file_url = 38-4105653_berger_standardcharges.xlsx.gz
+file = 38-4105653_berger_standardcharges.xlsx.gz
 #https://www.ohiohealth.com/siteassets/patients-and-visitors/preparing-for-your-visit/out-of-pocket-estimates/38-4105653_berger_standardcharges.xlsx
 test_file = 38-4105653_berger_standardcharges.xlsx.gz
 parser = xlsx
