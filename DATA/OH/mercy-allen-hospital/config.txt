@@ -5,7 +5,7 @@ file = 340864230_Allen_All_Payor_Combinations.json
 
 parser = json
 
-header = description:Procedure Description||code:Code||self_price:<Self-pay>||list_price:OP Price||rev_code:Rev Code||ip_price:IP Price||op_price:OP Price||min_rate:min||max_rate:max
+header = description:Procedure Description||code:Code||self_price:<Self-pay>||list_price:OP Price||rev_code:Rev Code||ip_price:IP Price||op_price:OP Price||min_rate:Min||max_rate:Max
 
 extra@code_extract =  (?:CPT\S\s|HCPCS\s)(.+)
 regex@code=\QCPT\E[^\s]+\s(.+)
