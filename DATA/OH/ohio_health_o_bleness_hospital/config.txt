@@ -1,6 +1,6 @@
 ref_url  = https://www.ohiohealth.com/patients-and-visitors/prepare-for-your-visit/price-estimator
 
-file_url = https://www.ohiohealth.com/siteassets/patients-and-visitors/preparing-for-your-visit/out-of-pocket-estimates/31-4394942_riverside_standardcharges.xlsx
+file_url = https://www.ohiohealth.com/siteassets/patients-and-visitors/preparing-for-your-visit/out-of-pocket-estimates/31-4440479_hardin_standardcharges.xlsx
 
 parser = xlsx
 
