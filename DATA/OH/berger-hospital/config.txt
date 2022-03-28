@@ -5,9 +5,12 @@ file = 38-4105653_berger_standardcharges.xlsx.gz
 test_file = 38-4105653_berger_standardcharges.xlsx.gz
 parser = xlsx
 
+extra@code_extract =  (?:CPT\S\s|HCPCS\s)(.+)   ailed to parse
+
 header =description:Procedure Description||io_type:Patient Class (Inpatient/Outpatient)||code:Code||rev_code:Rev Code||list_price:Gross Charge||self_price:##6||min_rate:##7||max_rate:##8
 
 
 
 
 
+iss
