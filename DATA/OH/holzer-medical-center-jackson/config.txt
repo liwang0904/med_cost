@@ -1,12 +1,11 @@
-ref_url  = 
+ref_url  = https://www.holzer.org/patients-visitors/billing-insurance-pricing/pricing/
 
-file_url = 
+file_url = https://www.holzer.org/app/files/public/1540/HMCJ-chargemaster.csv
 
 
-parser = xlsx
+parser = csv
 
-header = code:Charge Code||price:Unit Charge
-
+header = charge_code:Charge Code||description:Description||code:CPT||list_price:Price||payer:Payer||xr:Contract Price
 
 
 
