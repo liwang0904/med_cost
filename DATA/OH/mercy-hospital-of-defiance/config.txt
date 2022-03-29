@@ -1,8 +1,10 @@
 ref_url  = https://www.mercy.com/pay-a-bill/hospital-pricing
 
-file_url = https://www.mercy.com/-/media/mercy/patient-resources/hospital-pricing-transparency/20701635_defiance_all_payor_combination.ashx?la=en
-file = 20701635_Defiance_All_Payor_Combination.json
+file_url = https://www.mercy.com/-/media/mercy/patient-resources/hospital-pricing-transparency/020701635_defiance_standardcharges.ashx?la=en
 
 parser = json
 
-header = description:Procedure Description||code:Code||self_price:<Self-pay>||list_price:OP Price
+header = description:Procedure Description||code:Code||self_price:<Self-pay>||list_price:OP Price||rev_code:Rev Code||ip_price:IP Price||op_price:OP Price||min_rate:Min||max_rate:Max
+
+extra@code_extract =  (?:CPT\S\s|HCPCS\s)(.+)
+regex@code=\QCPT\E[^\s]+\s(.+)
