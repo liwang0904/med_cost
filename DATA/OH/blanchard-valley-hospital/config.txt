@@ -1,12 +1,12 @@
-ref_url  = 
+ref_url  = https://www.bvhealthsystem.org/patient-and-visitor-information/im-a-patient/pricing-information
 
-file_url = 
-
+file_url = https://www.bvhealthsystem.org/media/file/Blanchard%20Valley%20Hospital%20and%20Bluffton%20Hospital%20Charge%20Master%202020.xlsx
 
 parser = xlsx
 
-header = code:Charge Code||price:Unit Charge
+header = charge_code:Bill Item||description:CDM - Description||code:CDM - Description||list_price:Base Price||xr:Outpatient Price
 
+extra@code_extract = (\d+)(?:.+)
 
 
 
