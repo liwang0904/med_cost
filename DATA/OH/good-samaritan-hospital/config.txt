@@ -3,6 +3,7 @@ ref_url  = https://www.trihealth.com/tools/pay-your-bill/pricing
 file_url = https://www.trihealth.com/-/media/trihealth/documents/tools/pay-your-bill/fy-2021-22/310537486_thegoodsamaritanhospital_standardcharges.csv?la=en&hash=09DC664CEEC1E8F36807F96FABC5D82EF4B981AB
 test_file = test_import.csv
 
+extra@code_split =	
 parser = csv
 
 header =location:LOCATION||io_type:PATIENT_TYPE||description:CHARGE_DESCRIPTION||charge_code:CHARGE_CODE||rev_code:REVENUE_CODE||payer:PAYER||plan:PAYER_PLAN||list_price:GROSS_CHARGE||xr:PAYER_SPECIFIC_NEGOTIATED_CHARGE||self_price:DISCOUNTED_CASH_PRICE||min_rate:DEIDENTIFIED_MINIMUM_NEGOTIATED_CHARGE||max_rate:DEIDENTIFIED_MAXIMUM_NEGOTIATED_CHARGE
