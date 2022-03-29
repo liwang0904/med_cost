@@ -1,4 +1,4 @@
-ref_url  = https://www.mercy.com/pay-a-bill/hospital-pricing
+ref_url  = https://www.mercy.com/pay-a-bill/estimate-your-cost
 
 file_url = https://www.mercy.com/-/media/mercy/patient-resources/hospital-pricing-transparency/311556401_st-anne_standardcharges.ashx?la=en
 
