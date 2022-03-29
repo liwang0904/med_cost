@@ -6,6 +6,7 @@ parser = xlsx
 
 header = charge_code:Bill Item||description:CDM - Description||code:CDM - Description||list_price:Base Price||xr:Outpatient Price
 
+valid@code =  (\d+)(?:.+)
 extra@code_extract = (\d+)(?:.+)
 
 
