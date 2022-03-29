@@ -1,12 +1,10 @@
-ref_url  = 
+ref_url  = https://www.mercy.com/pay-a-bill/estimate-your-cost
 
-file_url = 
+file_url = https://www.mercy.com/-/media/mercy/patient-resources/hospital-pricing-transparency/310785684_springfield-regional_standardcharges.ashx?la=en
 
+parser = json
 
-parser = xlsx
+header = description:Procedure Description||code:Code||self_price:<Self-pay>||list_price:OP Price||rev_code:Rev Code||ip_price:IP Price||op_price:OP Price||min_rate:Min||max_rate:Max
 
-header = code:Charge Code||price:Unit Charge
-
-
-
-
+extra@code_extract =  (?:CPT\S\s|HCPCS\s)(.+)
+regex@code=\QCPT\E[^\s]+\s(.+)
