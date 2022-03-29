@@ -1,10 +1,10 @@
 ref_url  = https://www.mercy.com/pay-a-bill/hospital-pricing
 
-file_url = https://www.mercy.com/-/media/mercy/patient-resources/hospital-pricing-transparency/clermont-price-transparency.ashx?la=en
-file = Clermont Price Transparency.csv.gz
+file_url = https://www.mercy.com/-/media/mercy/patient-resources/hospital-pricing-transparency/310830955_clermont_standardcharges.ashx?la=en
 
-parser = csv
+parser = json
 
-header = description:Procedure||list_price:Charge
+header = description:Procedure Description||code:Code||self_price:<Self-pay>||list_price:OP Price||rev_code:Rev Code||ip_price:IP Price||op_price:OP Price||min_rate:Min||max_rate:Max
 
-regex@list_price=([0-9][0-9,\.]+)
+extra@code_extract =  (?:CPT\S\s|HCPCS\s)(.+)
+regex@code=\QCPT\E[^\s]+\s(.+)
