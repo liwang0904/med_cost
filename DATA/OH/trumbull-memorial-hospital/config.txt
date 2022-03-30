@@ -1,10 +1,10 @@
-ref_url  = https://www.trumbullregional.org/trumbull-regional-medical-center-price-list
+ref_url  = https://www.trihealth.com/tools/pay-your-bill/pricing
 
-file_url = https://content.steward.org/sites/default/files/Trumbull%20Price%20List%202020_0.xlsx?_ga=2.121864907.152774504.1622040171-737248623.1622040171
-file = Trumbull Price List 2020_0.xlsx
+file_url = https://content.steward.org/sites/default/files/815457243_TrumbullRegionalMedicalCenter_standardcharges_0.xlsx
+test_file = test_import.xlsx
 
 parser = xlsx
 
-header = description:Description||list_price:CURRENT PRICE
+header = charge_code:CHARGE CODE/PACKAGE||description:CHARGE DESCRIPTION||code:CPT||modifier:MODIFIERS||rev_code:REV CODE||list_price:GROSS CHARGES||self_price:SELF PAY CASH PRICE||min_rate:MIN NEGOTIATED RATE||max_rate:MAX NEGOTIATED RATE
 
-regex@list_price=\Q$\E(.+)
+extra@payers = Aetna Commercial IP Rate||Aetna Commercial OP Rate||Aetna Medicare/Advantra IP Rate||Aetna Medicare/Advantra OP Rate||Anthem Medicare IP Rate||Anthem Medicare OP Rate||Anthem PPO IP Rate||Anthem PPO OP Rate||Caresource Medicaid IP Rate||Caresource Medicaid OP Rate||Caresource MyCare IP Rate||Caresource MyCare OP Rate||Medical Mutual Commercial IP Rate||Medical Mutual Commercial OP Rate||United Commercial IP Rate||United Commercial OP Rate||United Medicaid IP Rate||United Medicaid OP Rate||United Medicare IP Rate||United Medicare OP Rate
