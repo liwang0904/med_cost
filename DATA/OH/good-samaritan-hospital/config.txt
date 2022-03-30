@@ -1,7 +1,9 @@
 ref_url  = https://www.trihealth.com/tools/pay-your-bill/pricing
 
 file_url = https://www.trihealth.com/-/media/trihealth/documents/tools/pay-your-bill/fy-2021-22/310537486_thegoodsamaritanhospital_standardcharges.csv?la=en&hash=09DC664CEEC1E8F36807F96FABC5D82EF4B981AB
+file       = 310537486_THEGOODSAMARITANHOSPITAL_STANDARDCHARGES.csv.gz
 test_file = test_import.csv
+
 parser = csv
 
 extra@delimiter = TAB
