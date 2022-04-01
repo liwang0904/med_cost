@@ -1,12 +1,10 @@
 ref_url  = https://wvumedicine.org/bill-pay/pricing-transparency/
 
-file_url = https://wvumedicine.org/wp-content/uploads/2021/03/Barnesville-Hospital-Payer-Specific-Charges-for-2021_123120.xlsx
+file_url = https://wvumedicine.org/wp-content/uploads/2022/03/340719172_BarnesvilleHospitalAssociationInc_standardcharges.xlsx
 
 
 parser = xlsx
 
-header = code:Charge Code||price:Unit Charge
+header = charge_code:Charge Code||description:Charge Description||rev_code:Revenue Code||code:CPT/HCPCS||list_price:Gross Charge||self_price:Uninsured Cash Price||min_rate:De-Identified Minimum Rate||max_rate:De-Identified Maximum Rate
 
-
-
-
+extra@payers = Aetna||Aetna Better Health Maryland||Anthem OH Traditional2||Anthem OH PPO||Anthem OH HMO||CareSource WV||CareSource OH Just4Me||Cigna||Humana Commercial||MultiPlan||Zelis/ Stratose/ 4 Most||The Health Plan Commercial||United Healthcare Outpatient||Alliance Coal Outpatient||Aetna Medicare Advantage Outpatient||Anthem OH PPO Medicare Advantage Outpatient||Anthem OH HMO Medicare Advantage Outpatient||CareSource OH Medicare Advantage Outpatient||Humana Large Group Medicare Advantage Outpatient||Humana Individual Medicare Advantage Outpatient2||The Health Plan Medicare Advantage Outpatient||UnitedHealthcare Medicar Advantage Outpatient||Gateway PA Medicare Advantage Outpatient||Provider Partners Outpatient
