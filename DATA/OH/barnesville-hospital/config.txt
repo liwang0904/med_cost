@@ -1,7 +1,7 @@
 ref_url  = https://wvumedicine.org/bill-pay/pricing-transparency/
 
 file_url = https://wvumedicine.org/wp-content/uploads/2022/03/340719172_BarnesvilleHospitalAssociationInc_standardcharges.xlsx
-
+test_file = test_import.xlsx
 
 parser = xlsx
 
