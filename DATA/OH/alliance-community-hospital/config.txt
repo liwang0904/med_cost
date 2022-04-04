@@ -1,11 +1,11 @@
-ref_url  = 
+ref_url  = https://aultmanalliance.org/patients-and-visitors/insurance-and-billing/fiscal-services/
 
-file_url = 
+file_url = https://aultmanalliance.org/assets/PDFZips/Financial-Services/360131_Alliance-Community-Hospital_StandardCharges_2022.xlsx
 
 
 parser = xlsx
 
-header = code:Charge Code||price:Unit Charge
+header = charge_code:Itemcode||description:Description||rev_code:CDM Revenue Code||code:CDM HCPCS||modifier:CDM Modifier||list_price:Standard Price
 
 
 
