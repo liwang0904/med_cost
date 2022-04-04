@@ -1,11 +1,11 @@
-ref_url  = https://weirton.acuityhealthcare.net/billing-insurance/
-
-file_url = https://weirton.acuityhealthcare.net/wp-content/uploads/sites/7/2019/01/OH_charge_master_upload.xls
-
+#ref_url  = https://weirton.acuityhealthcare.net/billing-insurance/
+ref_url  = https://www.selectspecialtyhospitals.com/locations-and-tours/wv/wheeling/wheeling/
+#file_url = https://weirton.acuityhealthcare.net/wp-content/uploads/sites/7/2019/01/OH_charge_master_upload.xls
+file_url = https://resources.selectmedical.com/Pricing-Transparency/critical-illness-recovery/36-4575640_Acuity_Specialty_Hospital-Ohio_Valley_Wheeling_standardcharges.csv
 
 parser = xlsx
 
-header = code:||price:CHARGE
+header = charge_code: CHARGE_CODE||description:CHARGE_DESCRIPTION||list_price:CHARGE||rev_code:REVENUE_CODE||code:CPT_CODE
 
 
 
