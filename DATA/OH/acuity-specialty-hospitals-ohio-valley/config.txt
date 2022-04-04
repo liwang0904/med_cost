@@ -4,8 +4,8 @@
 ref_url = https://www.selectspecialtyhospitals.com/locations-and-tours/wv/weirton/weirton/
 
 #file_url = https://weirton.acuityhealthcare.net/wp-content/uploads/sites/7/2019/01/OH_charge_master_upload.xls
-#file_url = https://resources.selectmedical.com/Pricing-Transparency/critical-illness-recovery/36-4575640_Acuity_Specialty_Hospital-Ohio_Valley_Wheeling_standardcharges.csv
-file_url = https://www.selectspecialtyhospitals.com/locations-and-tours/wv/weirton/weirton/36-4575640_Acuity_Specialty_Hospital-Ohio_Valley_Weirton_standardcharges.csv
+file_url = https://resources.selectmedical.com/Pricing-Transparency/critical-illness-recovery/36-4575640_Acuity_Specialty_Hospital-Ohio_Valley_Wheeling_standardcharges.csv
+#file_url = https://www.selectspecialtyhospitals.com/locations-and-tours/wv/weirton/weirton/36-4575640_Acuity_Specialty_Hospital-Ohio_Valley_Weirton_standardcharges.csv
 parser = csv
 
 header = charge_code: CHARGE_CODE||description:CHARGE_DESCRIPTION||list_price:CHARGE||rev_code:REVENUE_CODE||code:CPT_CODE
