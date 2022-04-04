@@ -4,7 +4,7 @@ file_url = https://aultmanalliance.org/assets/PDFZips/Financial-Services/360131_
 
 
 parser = xlsx
-
+extra@sheet = Gross Charge
 header = charge_code:Itemcode||description:Description||rev_code:CDM Revenue Code||code:CDM HCPCS||modifier:CDM Modifier||list_price:Standard Price
 
 
