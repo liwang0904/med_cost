@@ -1,7 +1,7 @@
 ref_url  = https://www.thechristhospital.com/patient-resources/patient-financial-services/pricing-and-estimates/price-list-and-cost
 file_url = https://www.thechristhospital.com/stfiles/31-0538525TheChristHospitalHealthNetworkStandardCharges.json
 file    = 31-0538525TheChristHospitalHealthNetworkStandardCharges.json.gz
-file=test_import.json
+test_file    = test_import.json
 
 
 parser = json
