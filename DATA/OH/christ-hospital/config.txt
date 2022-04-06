@@ -6,8 +6,8 @@ file=test_import.json
 
 parser = json
 
-header = code:Charge Code||price:Unit Charge
+header = code:Procedure_Description||description:Procedure_Name||self_price:Cash Discount Rate||list_price:AvgChg||charge_code:Procedure_Code||min_rate:MinUnitPmt||max_rate:MaxUnitPmt
 
+extra@code_extract =  (?:CPT\s|HCPCS\s)(.+)
 
-
-
+extra@payers  = ANTHEM [2024]||ANTHEM MEDICAID KENTUCKY [2194]||CARESOURCE [2031]||CUSTOM DESIGN BENEFITS - TRUE COST [3004]||MEDICAL MUTUAL [2054]||UHC MEDICARE [1004]
