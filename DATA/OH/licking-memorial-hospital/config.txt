@@ -1,7 +1,7 @@
 ref_url  = https://www.lmhealth.org/Patients-Visitors/Before-You-Arrive/Patient-Pricing.aspx
 
 file_url = https://www.lmhealth.org/LMHealth.org/media/Comprehensive-Charge-List-CSV.csv
-
+test_file = test_import.csv
 
 parser = csv
 
