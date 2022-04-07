@@ -5,6 +5,6 @@ test_file = test_import.json
 
 parser = json
 
-header = code:Associated_Codes||description:description||io_type:iobSelection||list_price:Gross_Charge||min_rate:Deidentified_Min_Allowed||max_rate:Deidentified_Max_Allowed||self_price:Cash_Discount||xr:Payer_Allowed_Amount||payer:payer
+header = code:Associated_Codes||description:description||io_type:iobSelection||list_price:Gross_Charge||min_rate:Deidentified_Min_Allowed||max_rate:DeIdentified_Max_Allowed||self_price:Cash_Discount||xr:Payer_Allowed_Amount||payer:payer
 
 extra@code_split =,
