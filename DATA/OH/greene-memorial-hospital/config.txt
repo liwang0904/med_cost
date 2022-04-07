@@ -1,9 +1,9 @@
-ref_url  = 
+ref_url  = https://ketteringhealth.org/billing-insurance/patient-pricing/ 
 
-file_url = 
+file_url = https://ketteringhealth.org/wp-content/uploads/2021/12/1255317848_Kettering-Health-Greene-Memorial_StandardCharges.json
 
 
-parser = xlsx
+parser = json2
 
 header = code:Charge Code||price:Unit Charge
 
