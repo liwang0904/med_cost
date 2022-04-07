@@ -1,12 +1,10 @@
 ref_url  = https://www.hcchospital.org/about_us/pricing_for_services.aspx
 
 file = 431530883_harrison-county-community-hospital_standardcharges.json
-
+test_file = test_import.json
 
 parser = json
 
 header = codeAssociated_Codes||description:description||io_type:iobSelection||list_price:Gross_Charge||min_rate:Deidentified_Min_Allowed||max_rate:Deidentified_Max_Allowed||self_price:Cash_Discount||xr:Payer_Allowed_Amount||payer:payer
 
-
-
-
+extra@code_split =,
