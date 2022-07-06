@@ -1,0 +1,13 @@
+ref_url  = https://www.havenofdayton.com/price-transparency/
+
+file_url = https://www.havenofdayton.com/wp-content/uploads/sites/5/2021/01/35-2429122_Haven-Behavioral-Hospital-of-Dayton_standardcharges.csv
+
+
+parser = csv
+
+header = code:INTERNAL REFERENCE NUMBER||description:SERVICE DESCRIPTION||min_rate:MINIMUM NEGOTIATED CHARGE||max_rate:MAXIMUM NEGOTIATED CHARGE||payer:PAYER_NAME
+
+regex@code        = (?:CPT\S\s|HCPCS\s)(.+)
+
+
+
