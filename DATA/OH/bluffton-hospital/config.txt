@@ -8,7 +8,7 @@ test_file = test_import.json
 parser    = json
 
 
-header = code:CPT||description:PRIMARY_CODE_DESCRIPTION||list_price:CASH_PRICE_OUTPATIENT||min_rate:MIN_NEGOTIATED_RATE||max_rate:MAX_NEGOTIATED_RATE||payer:PAYER_NAME
+header = code:CPT||description:PRIMARY_CODE_DESCRIPTION||list_price:GROSS_CHARGES||min_rate:MIN_NEGOTIATED_RATE||max_rate:MAX_NEGOTIATED_RATE||payer:PAYER_NAME
 
 
 
@@ -21,4 +21,4 @@ header = code:CPT||description:PRIMARY_CODE_DESCRIPTION||list_price:CASH_PRICE_O
 === FEE ===
 
 
-header = code:CPT||description:PRIMARY_CODE_DESCRIPTION||list_price:CASH_PRICE_OUTPATIENT||min_rate:MIN_NEGOTIATED_RATE||max_rate:MAX_NEGOTIATED_RATE||payer:PAYER_NAME
+header = code:CPT||description:PRIMARY_CODE_DESCRIPTION||list_price:GROSS_CHARGES||min_rate:MIN_NEGOTIATED_RATE||max_rate:MAX_NEGOTIATED_RATE||payer:PAYER_NAME||ip_xr:GROSS_CHARGES||op_xr:GROSS_CHARGES
