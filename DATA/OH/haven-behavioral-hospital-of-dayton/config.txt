@@ -6,5 +6,3 @@ file      = 35-2429122_Haven-Behavioral-Hospital-of-Dayton_standardcharges.csv.g
 parser = csv
 
 header = description:SERVICE DESCRIPTION||min_rate:MINIMUM NEGOTIATED CHARGE||max_rate:MAXIMUM NEGOTIATED CHARGE||payer:PAYER_NAME||list_price:MAXIMUM NEGOTIATED CHARGE
-
-regex@code        = (?:CPT\S\s|HCPCS\s)(.+)
