@@ -1,6 +1,8 @@
 ref_url  = https://www.havenofdayton.com/price-transparency/
 
-file_url = https://www.havenofdayton.com/wp-content/uploads/sites/5/2021/01/35-2429122_Haven-Behavioral-Hospital-of-Dayton_standardcharges.csv
+##file_url = https://www.havenofdayton.com/wp-content/uploads/sites/5/2021/01/35-2429122_Haven-Behavioral-Hospital-of-Dayton_standardcharges.csv
+
+file      = 35-2429122_Haven-Behavioral-Hospital-of-Dayton_standardcharges.csv.gz
 
 
 parser = csv
