@@ -12,7 +12,7 @@ header = code:CPT||description:PRIMARY_CODE_DESCRIPTION||list_price:CASH_PRICE_O
 
 
 
-regex@code        = (?:CPT\S\s|HCPCS\s)(.+)
+#regex@code        = (?:CPT\S\s|HCPCS\s)(.+)
 
 ##custom:regex@code = Custom\s(.+)
 ##drg:regex@code    = \QMS-DRG V37 (2020) \E(.+)
