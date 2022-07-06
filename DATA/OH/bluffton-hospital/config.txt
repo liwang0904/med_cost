@@ -3,7 +3,7 @@ ref_url  = https://www.bvhealthsystem.org/patient-and-visitor-information/im-a-p
 
 file      = 344429941_Bluffton-Hospital_Standard-Charges.json.gz
 
-##test_file = test_import.csv
+test_file = test_import.json
 
 parser    = json
 
