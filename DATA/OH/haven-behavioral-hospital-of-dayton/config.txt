@@ -2,6 +2,7 @@ ref_url  = https://www.havenofdayton.com/price-transparency/
 
 file      = 35-2429122_Haven-Behavioral-Hospital-of-Dayton_standardcharges.csv.gz
 
+test_file = test_import.csv
 
 parser = csv
 

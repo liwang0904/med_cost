@@ -1,12 +1,11 @@
-ref_url  =  https://acrmc.com/
+ref_url  =  https://acrmc.com/financial-assistance/
 
-file_url = 
+file_url = https://www.cdmpricing.com/21b6200b-2c2c-4fcb-a28b-514ee89e756e
+
+file = Revenue by FC Outpatient YTD 113020.xls.gz
 
 
 parser = xlsx
 
-header = code:Charge Code||price:Unit Charge
-
-
-
+header = code:PRIMARY INSURANCE CPT CODE||price:Charge||rev_code:INSURANCE REVENUE CODE||description:SERVICE DESCRIPTION
 
