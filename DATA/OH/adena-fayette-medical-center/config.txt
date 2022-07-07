@@ -1,0 +1,10 @@
+ref_url  =  https://www.adena.org/patients-and-visitors/billing-and-financial-services/billing-and-insurance#:~:text=You%20can%20now%20use%20the,you%20are%20insured%20or%20uninsured.
+
+file_url = https://www.adena.org/docs/default-source/billing-and-financial/adena-fayette-medical-center-price-transparency-standard-charges.xlsx?sfvrsn=8b01f0e3_3
+
+file = Adena-Fayette-Medical-Center-Price-Transparency-Standard-Charges.xlsx.gz
+
+
+parser = xlsx
+
+header = code:M'care  CPT||price:PRICE1||description:CDM DESCRIPTION
