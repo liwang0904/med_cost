@@ -1,0 +1,19 @@
+ref_url  = https://arrowheadbehavioral.com/standard-services/
+
+file_url = https://uhsfilecdn.eskycity.net/bh/270608044-arrowhead-standard_charges.csv
+
+file = 270608044-arrowhead-standard_charges.csv.gz
+
+parser = xlsx
+
+header = price:Standard Charge (Gross Charge)||description:Specialty||min_rate:De-Identified (low rate)||max_rate:De-Identified (high rate)
+
+
+== FEE ==
+extra@payers = AETNA BETTER HEALTH Rate||AETNA BETTER HEALTH Rate||AETNA MGD MEDICARE Rate||ANTHEM BC/BS Rate||ANTHEM HMO PPO Rate||ANTHEM MGD MEDICARE Rate||ANTHEM NASCO Rate||BUCKEYE MANAGED MEDI Rate||BUCKEYE MEDICARE HMO Rate||CARESOURCE OH MEDICA Rate||CARESOURCE OH MEDICA Rate||CHRYSLER MMO Rate||CIGNA Rate||FEDERAL BCBS Rate||HUMANA MGD MEDICARE Rate||HUMANA PPO Rate||MAGELLAN Rate||	MEDICAL MUTUAL OF OH Rate	||MERITAIN Rate||MMO HMO PPO Rate||MMO NASCO Rate||MOLINA OH MCD Rate||PARAMOUNT ADVANTAGE Rate||PARAMOUNT COMMERCIAL Rate||PARAMOUNT ELITE Rate||TRICARE EAST Rate||UBH/OPTUM HEALTHCARE Rate||UHC COMM HEALTH MCD Rate||UHC COMMUNITY MEDICA Rate||UMR Rate||VALUE OPTIONS Rate||VALUE OPTIONS - CHRY Rate||VALUE OPTIONS AT&T Rate||VALUE OPTIONS CD Rate
+
+
+
+
+
+
