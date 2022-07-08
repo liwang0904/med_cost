@@ -11,4 +11,4 @@ header = code:M'care  CPT||price:PRICE1||description:CDM DESCRIPTION
 
 === FEE ===
 
-header = code:M'care  CPT||price:PRICE1||description:CDM DESCRIPTION
+header = code:M'care  CPT||price:PRICE1||description:CDM DESCRIPTION||min_rate:PRICE1||max_rate:PRICE1||ip_xr:PRICE1||op_xr:PRICE1
