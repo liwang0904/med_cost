@@ -4,7 +4,7 @@ file_url = https://uhsfilecdn.eskycity.net/bh/270608044-arrowhead-standard_charg
 
 file = 270608044-arrowhead-standard_charges.csv.gz
 
-parser = xlsx
+parser = csv
 
 header = price:Standard Charge (Gross Charge)||description:Specialty||min_rate:De-Identified (low rate)||max_rate:De-Identified (high rate)
 
