@@ -1,0 +1,10 @@
+ref_url  = https://www.akronchildrens.org/pages/Patient-Price-Information-List.html
+
+file_url = https://www.akronchildrens.org/pricing/340714357_akronchildrens_akron_standardcharges.xlsx
+
+parser = xlsx
+header = code_type:Code Type||code:Code||rev_code:Rev Code||description:Procedure Description||ip_price:IP Price||ip_xr:IP Expected Reimbursement||op_price:OP Price||op_xr:OP Expected Reimbursement
+
+
+
+
