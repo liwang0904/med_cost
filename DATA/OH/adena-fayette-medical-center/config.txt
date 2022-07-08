@@ -8,3 +8,7 @@ file = Adena-Fayette-Medical-Center-Price-Transparency-Standard-Charges.xlsx.gz
 parser = xlsx
 
 header = code:M'care  CPT||price:PRICE1||description:CDM DESCRIPTION
+
+=== FEE ===
+
+header = code:M'care  CPT||price:PRICE1||description:CDM DESCRIPTION
