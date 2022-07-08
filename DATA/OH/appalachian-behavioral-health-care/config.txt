@@ -6,8 +6,4 @@ file = 85-1313265_Appalachian-Regional-Behavioral-Health_standardcharges.csv.gz
 
 parser = csv
 
-header = code:CPT/HCPCS||description:Description||self_price: Self Pay||list_price:FY 22 Price||rev_code:Rev Code
-
-
-
-
+header = code:CPT/HCPCS||description:Description||self_price:Self Pay||list_price:FY 22 Price||rev_code:Rev Code||ip_xr:FY 22 Price||op_xr:FY 22 Price
