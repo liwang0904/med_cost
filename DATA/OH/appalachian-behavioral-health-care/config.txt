@@ -1,0 +1,13 @@
+ref_url  = https://apprhs.org/estimate-your-healthcare-cost/
+
+file_url = https://apprhs.org/?wpfb_dl=280
+
+file = 85-1313265_Appalachian-Regional-Behavioral-Health_standardcharges.csv.gz
+
+parser = csv
+
+header = code:CPT/HCPCS||description:Description||self_price: Self Pay||list_price:FY 22 Price||rev_code:Rev Code
+
+
+
+
