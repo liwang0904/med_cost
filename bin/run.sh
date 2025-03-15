@@ -33,7 +33,7 @@ case $1 in
     
     *)
         echo "!!! Unkown options \"$@\" !!!"
-        ;;
+ e        ;;
 
 esac
 echo ">>--> End: $@"
